@@ -12,6 +12,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <name>Ticket Service</name>
+    <description>An interactive console application which aids and informs workers and customers
+    of a movie theater.</description>
+
     <properties>
         <java.version>11</java.version>
         <maven.compiler.source>11</maven.compiler.source>
@@ -23,20 +27,6 @@
         <junit.version>5.7.1</junit.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
     <dependencyManagement>
 
     </dependencyManagement>
