@@ -4,6 +4,14 @@
 
     <artifactId>ticket-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>messages</artifactId>
+            <version>13.2.1</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
     <parent>
         <groupId>com.epam.training.ticketservice</groupId>

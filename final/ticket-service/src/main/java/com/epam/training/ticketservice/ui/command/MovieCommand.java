@@ -1,0 +1,52 @@
+package com.epam.training.ticketservice.ui.command;
+
+import com.epam.training.ticketservice.core.movie.MovieService;
+import com.epam.training.ticketservice.core.movie.model.MovieDto;
+import com.epam.training.ticketservice.core.user.UserService;
+import com.epam.training.ticketservice.core.user.model.UserDto;
+import com.epam.training.ticketservice.core.user.persistence.entity.User;
+import org.springframework.shell.Availability;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellMethodAvailability;
+
+import java.util.List;
+import java.util.Optional;
+
+@ShellComponent
+public class MovieCommand {
+    private final UserService userService;
+    private final MovieService movieService;
+
+    public MovieCommand(MovieService movieService, UserService userService) {
+        this.movieService = movieService;
+        this.userService = userService;
+    }
+
+    private Availability isAvailable() {
+        Optional<UserDto> user = userService.describeAccount();
+        if (user.isPresent() && user.get().getRole() == User.Role.ADMIN) {
+            return Availability.available();
+        }
+        return Availability.unavailable("You are not an admin!");
+    }
+
+    @ShellMethodAvailability("isAvailable")
+    @ShellMethod(key = "create movie", value = "Create a movie.")
+    public MovieDto createMovie(String name, String genre, Integer length) {
+        MovieDto movie = MovieDto.builder()
+                .withName(name)
+                .withGenre(genre)
+                .withLength(length)
+                .build();
+        movieService.createMovie(movie);
+        return movie;
+    }
+
+    @ShellMethod(key = "list movies", value = "List all available movies")
+    public List<MovieDto> listAvailableMovies() {
+        return movieService.getMovieList();
+    }
+}
+ //TODO: update movie, delete movie, create room, update room, delete room, list rooms, create screening, delete screening, list screening
+//TODO: update base price, create price component, attach prive component to movie, attach price component to screening, show price for
