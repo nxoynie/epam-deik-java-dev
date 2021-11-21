@@ -61,7 +61,17 @@ public class MovieCommand {
             movieService.updateMovie(movieDto);
         }
     }
+
+    @ShellMethodAvailability("isAvailable")
+    @ShellMethod(key = "delete movie", value = "Deletes a movie.")
+    public String deleteMovie(String name) {
+        if(movieService.getMovieByName(name).isEmpty()){
+            return "Movies does not exist";
+        }else{
+            movieService.deleteMovie(name);
+            return name + " deleted successfully.";
+        }
+    }
 }
 
- //TODO: update movie, delete movie, create room, update room, delete room, list rooms, create screening, delete screening, list screening
-//TODO: update base price, create price component, attach prive component to movie, attach price component to screening, show price for
+//TODO: delete movie does not work yet
