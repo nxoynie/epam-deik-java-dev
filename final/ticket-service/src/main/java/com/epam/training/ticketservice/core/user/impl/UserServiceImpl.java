@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 import java.util.Optional;
 
+
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -54,6 +56,12 @@ public class UserServiceImpl implements UserService {
         loggedInUser = retrieveUserInfoByNameAndPassword(username, password);
         return describeAccount();
     }
+
+    @Override
+    public User.Role getRole() {
+        return loggedInUser.getRole();
+    }
+
 
     @Override
     public void signUp(String username, String password) {

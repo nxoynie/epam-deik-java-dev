@@ -1,5 +1,6 @@
 package com.epam.training.ticketservice.core.configuration;
 
+import com.epam.training.ticketservice.core.movie.persistence.repository.MovieRepository;
 import com.epam.training.ticketservice.core.user.persistence.entity.User;
 import com.epam.training.ticketservice.core.user.persistence.repository.UserRepository;
 import org.springframework.context.annotation.Profile;
@@ -11,7 +12,7 @@ import javax.annotation.PostConstruct;
 @Profile("!prod")
 public class InMemoryDatabaseInitializer {
 
-    private final MovieRepository productRepository;
+    private final MovieRepository movieRepository;
     private final UserRepository userRepository;
 
     public InMemoryDatabaseInitializer(MovieRepository movieRepository, UserRepository userRepository) {

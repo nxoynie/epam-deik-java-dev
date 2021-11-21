@@ -1,0 +1,16 @@
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\movie\model\MovieDto.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\ui\command\UserCommand.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\movie\persistence\repository\MovieRepository.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\movie\MovieService.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\user\impl\UserServiceImpl.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\configuration\InMemoryDatabaseInitializer.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\movie\persistence\entity\Movie.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\user\model\UserDto.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\ui\ApplicationConfiguration.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\user\persistence\repository\UserRepository.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\configuration\PromptConfiguration.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\user\UserService.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\ui\command\MovieCommand.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\Application.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\movie\impl\MovieServiceImpl.java
+D:\epam-deik-java-dev\final\ticket-service\src\main\java\com\epam\training\ticketservice\core\user\persistence\entity\User.java

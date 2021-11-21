@@ -24,9 +24,11 @@ public class MovieServiceImpl implements MovieService {
         return movieRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
-    public Optional<MovieDto> getMovieByName(String productName) {
-        return convertEntityToDto(movieRepository.findByName(productName));
+    @Override
+    public Optional<MovieDto> getMovieByName(String movieName) {
+        return convertEntityToDto(movieRepository.findByName(movieName));
     }
+
 
     @Override
     public void createMovie(MovieDto movieDto) {
@@ -38,12 +40,29 @@ public class MovieServiceImpl implements MovieService {
         movieRepository.save(movie);
     }
 
+    @Override
+    public void updateMovie(MovieDto movieDto) {
+        Objects.requireNonNull(movieDto, "Movie cannot be null");
+        Objects.requireNonNull(movieDto.getName(), "Movie Name cannot be null");
+        Movie movieToChange = movieRepository.findByName(movieDto.getName())
+                .orElseThrow(() -> new IllegalArgumentException("The given movie does not exist"));
+        movieToChange.setGenre(movieDto.getGenre());
+        movieToChange.setLength(movieDto.getLength());
+        movieRepository.save(movieToChange);
+    }
+
     private MovieDto convertEntityToDto(Movie movie) {
         return MovieDto.builder()
                 .withName(movie.getName())
                 .withGenre(movie.getGenre())
                 .withLength(movie.getLength())
                 .build();
+    }
+
+    @Override
+    public void deleteMovie(String movieName) {
+        Objects.requireNonNull(movieName, "Movie name cannot be null");
+        movieRepository.deleteByName(movieName);
     }
 
     private Optional<MovieDto> convertEntityToDto(Optional<Movie> movie) {

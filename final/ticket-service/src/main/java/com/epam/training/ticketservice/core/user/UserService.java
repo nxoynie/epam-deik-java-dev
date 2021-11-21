@@ -15,6 +15,8 @@ public interface UserService {
 
     Optional<UserDto> singInPrivileged(String username, String password);
 
+    User.Role getRole();
+
 
     void signUp(String username, String password);
 

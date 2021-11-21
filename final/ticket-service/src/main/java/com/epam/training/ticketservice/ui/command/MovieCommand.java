@@ -47,6 +47,21 @@ public class MovieCommand {
     public List<MovieDto> listAvailableMovies() {
         return movieService.getMovieList();
     }
+
+    @ShellMethodAvailability("isAvailable")
+    @ShellMethod(key = "update movie", value = "Update and existing movie.")
+    public void updateMovie(String name, String genre, Integer length) {
+        MovieDto movieDto = new MovieDto(
+                name,
+                genre,
+                length);
+        if (movieService.getMovieByName(movieDto.getName()).isEmpty()) {
+            System.out.println("Movie does not exist");
+        } else {
+            movieService.updateMovie(movieDto);
+        }
+    }
 }
+
  //TODO: update movie, delete movie, create room, update room, delete room, list rooms, create screening, delete screening, list screening
 //TODO: update base price, create price component, attach prive component to movie, attach price component to screening, show price for

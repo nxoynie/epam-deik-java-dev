@@ -8,26 +8,20 @@ import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellMethodAvailability;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @ShellComponent
 public class UserCommand {
     private final UserService userService;
-    private final User u;
 
-    public UserCommand(UserService userService, User u){this.userService = userService;
-        this.u = u;
+
+
+    public UserCommand(UserService userService){
+        this.userService = userService;
     }
 
 
-    private Availability isAvailable() {
-        Optional<UserDto> user = userService.describeAccount();
-        if (user.isPresent() && user.get().getRole() == User.Role.ADMIN) {
-            return Availability.available();
-        }
-        return Availability.unavailable("You are not an admin!");
-    }
-    @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "sign in privileged", value = "Signing in as an admin.")
     public String signInPrivileged(String username, String password) {
         Optional<UserDto> user = userService.singInPrivileged(username, password);
@@ -49,11 +43,10 @@ public class UserCommand {
     @ShellMethod(key = "describe account", value = "You can query the type and state of the currently signed in account.")
     public String describeAccount() {
         Optional<UserDto> user = userService.describeAccount();
-        User.Role role = u.getRole();
         if (user.isEmpty()) {
             return "You are not signed in";
         }
-        if (role.equals(User.Role.ADMIN)) {
+        if (Objects.equals(userService.getRole(), User.Role.ADMIN)) {
             return "Signed in with privileged account" + user.get();
         }else{
             return "Signed in with account" + user.get();
@@ -70,6 +63,7 @@ public class UserCommand {
 
         }
     }
+
     @ShellMethod(key = "sign in", value = "Sign in as non-admin user")
     public String signIn(String userName, String password){
         Optional<UserDto> user = userService.signIn(userName, password);
@@ -79,4 +73,3 @@ public class UserCommand {
     }
 
 }
-//TODO: book

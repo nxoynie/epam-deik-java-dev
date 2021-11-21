@@ -1,0 +1,15 @@
+#Sun Nov 21 16:41:11 CET 2021
+configuration*?=5664AA2DEE4A454518DCF1EBFE797119D1399FBD
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\ui\\ApplicationConfiguration.java=1637427680291
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\resources\\application-prod.properties=1637509006211
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\Application.java=1637420362135
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\resources\\application-dev.properties=1637420362143
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\movie\\persistence\\repository\\MovieRepository.java=1637424849716
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\user\\persistence\\repository\\UserRepository.java=1637421831463
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\configuration\\InMemoryDatabaseInitializer.java=1637509051672
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\movie\\impl\\MovieServiceImpl.java=1637435712596
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\resources\\application.properties=1637420362144
+module-resource*?\:checkstyle-xpath-suppressions.xml=C9E5F5B17939E6989F780DF642320CA02A51F5CC
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\user\\UserService.java=1637438296305
+module-resource*?\:checkstyle-suppressions.xml=E1073E47D03EAE1D2D3D3F13234CE087428F31DB
+D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\movie\\MovieService.java=1637425089924
