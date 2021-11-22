@@ -83,5 +83,4 @@ public class RoomCommand {
                             ));
         }
     }
-    //TODO: list nem működik
 }

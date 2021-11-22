@@ -5,12 +5,15 @@ import com.epam.training.ticketservice.core.room.model.RoomDto;
 import com.epam.training.ticketservice.core.room.persistance.entity.Room;
 import com.epam.training.ticketservice.core.room.persistance.repository.RoomRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class RoomServiceImpl implements RoomService {
 
     private final RoomRepository roomRepository;
@@ -26,21 +29,35 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public Optional<RoomDto> getRoomByName(String roomName) {
-        return null;
+        return convertEntityToDto(roomRepository.findByName(roomName));
     }
 
     @Override
-    public void createRoom(RoomDto room) {
+    public void createRoom(RoomDto roomDto) {
+        Objects.requireNonNull(roomDto, "Room cannot be null.");
+        Objects.requireNonNull(roomDto.getName(), "Room name cannot be null.");
+        Objects.requireNonNull(roomDto.getRows(), "Room rows cannot be null.");
+        Objects.requireNonNull(roomDto.getColumns(), "Room columns cannot be null.");
+        Room room = new Room(roomDto.getName(), roomDto.getRows(), roomDto.getColumns());
+        roomRepository.save(room);
 
     }
 
     @Override
     public void updateRoom(RoomDto roomDto) {
-
+        Objects.requireNonNull(roomDto, "Room cannot be null.");
+        Objects.requireNonNull(roomDto.getName(), "Room name cannot be null.");
+        Room roomtoChange = roomRepository.findByName(roomDto.getName())
+                .orElseThrow(() -> new IllegalArgumentException("The given room does not exist."));
+        roomtoChange.setRows(roomDto.getRows());
+        roomtoChange.setColumns(roomDto.getColumns());
+        roomRepository.save(roomtoChange);
     }
 
     @Override
     public void deleteRoom(String roomName) {
+        Objects.requireNonNull(roomName, "Room name cannot be null.");
+        roomRepository.deleteByName(roomName);
 
     }
 

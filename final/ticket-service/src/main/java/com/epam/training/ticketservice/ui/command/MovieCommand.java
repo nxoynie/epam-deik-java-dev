@@ -74,4 +74,3 @@ public class MovieCommand {
     }
 }
 
-//TODO: delete movie does not work yet

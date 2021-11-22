@@ -57,7 +57,7 @@ public class UserCommand {
     public String signUp(String userName, String password){
         try {
             userService.signUp(userName, password);
-            return "Signing up was succesfull!";
+            return "Signing up was successful!";
         }catch (Exception e){
             return "Signing up failed!";
 

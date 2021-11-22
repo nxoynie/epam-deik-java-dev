@@ -15,8 +15,8 @@ public class Room {
 
     public Room(){}
 
-    public Room(Integer id, String name, Integer rows, Integer columns){
-        this.id = id;
+    public Room(String name, Integer rows, Integer columns){
+
         this.name = name;
         this.rows = rows;
         this.columns = columns;
