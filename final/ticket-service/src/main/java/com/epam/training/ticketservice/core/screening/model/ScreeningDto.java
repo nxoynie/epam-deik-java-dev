@@ -1,14 +1,21 @@
 package com.epam.training.ticketservice.core.screening.model;
 
+import com.epam.training.ticketservice.core.movie.model.MovieDto;
+import com.epam.training.ticketservice.core.room.model.RoomDto;
+import com.epam.training.ticketservice.core.room.persistance.entity.Room;
+import net.bytebuddy.asm.Advice;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class ScreeningDto {
 
-    private final String movie;
-    private final String room;
-    private final String date;
+    private final MovieDto movie;
+    private final RoomDto room;
+    private final LocalDateTime date;
 
-    public ScreeningDto(String movie, String room, String date) {
+    public ScreeningDto(MovieDto movie, RoomDto room, LocalDateTime date) {
         this.movie = movie;
         this.room = room;
         this.date = date;
@@ -19,17 +26,18 @@ public class ScreeningDto {
         return new Builder();
     }
 
-    public String getMovie() {
+    public MovieDto getMovie() {
         return movie;
     }
 
-    public String getRoom() {
+    public RoomDto getRoom() {
         return room;
     }
 
-    public String getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -49,33 +57,33 @@ public class ScreeningDto {
 
     @Override
     public String toString() {
-        return "ScreeningDto{"
-                + "movie=" + movie
-                + ", room=" + room
-                + ", date=" + date
-                + '}';
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        String screeningStartDateString = date.format(formatter);
+        return movie.toString() + ", screened in room " + room.getName() + ", at " + screeningStartDateString;
     }
-    public static class Builder {
-        private String movie;
-        private String room;
-        private String date;
+        public static class Builder {
+            private MovieDto movie;
+            private RoomDto room;
+            private LocalDateTime date;
 
-        public Builder withMovie(String movie) {
-            this.movie = movie;
-            return this;
-        }
+            public ScreeningDto.Builder withMovie(MovieDto movie) {
+                this.movie = movie;
+                return this;
+            }
 
-        public Builder withRoom(String room) {
-            this.room = room;
-            return this;
-        }
-        public ScreeningDto.Builder withDate(String date) {
-            this.date = date;
-            return this;
-        }
+            public ScreeningDto.Builder withRoom(RoomDto room) {
+                this.room = room;
+                return this;
+            }
 
-        public ScreeningDto build() {
-            return new ScreeningDto(movie, room, date);
+            public ScreeningDto.Builder withDate(LocalDateTime date) {
+                this.date = date;
+                return this;
+            }
+
+            public ScreeningDto build() {
+                return new ScreeningDto(movie, room, date);
+            }
         }
     }
-}
+

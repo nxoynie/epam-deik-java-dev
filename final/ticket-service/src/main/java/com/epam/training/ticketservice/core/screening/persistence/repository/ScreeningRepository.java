@@ -6,11 +6,13 @@ import com.epam.training.ticketservice.core.screening.persistence.entity.Screeni
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 @Repository
 public interface ScreeningRepository extends JpaRepository<Screening, Integer> {
 
-    Optional<Screening> findByMovieAndRoomAndDate(String movie, String room, String date);
+    void deleteByMovieAndRoomAndDate(String movie, String room, LocalDateTime date);
 
-    void deleteByMovieAndRoomAndDate(String movie, String room, String date);
+    List<Screening> findByRoom(String room);
 }
