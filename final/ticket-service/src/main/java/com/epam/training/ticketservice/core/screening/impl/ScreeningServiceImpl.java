@@ -1,7 +1,11 @@
 package com.epam.training.ticketservice.core.screening.impl;
 
+import com.epam.training.ticketservice.core.movie.MovieService;
+import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
 import com.epam.training.ticketservice.core.movie.persistence.repository.MovieRepository;
+import com.epam.training.ticketservice.core.room.RoomService;
+import com.epam.training.ticketservice.core.room.model.RoomDto;
 import com.epam.training.ticketservice.core.room.persistance.entity.Room;
 import com.epam.training.ticketservice.core.room.persistance.repository.RoomRepository;
 import com.epam.training.ticketservice.core.screening.ScreeningService;
@@ -26,13 +30,17 @@ public class ScreeningServiceImpl  implements ScreeningService {
     private final ScreeningRepository screeningRepository;
     private final MovieRepository movieRepository;
     private final RoomRepository roomRepository;
+    private final MovieService movieService;
+    private final RoomService roomService;
     String pattern = "YYYY-MM-DD hh:mm";
     DateFormat dateFormat = new SimpleDateFormat(pattern);
 
-    public ScreeningServiceImpl(ScreeningRepository screeningRepository, MovieRepository movieRepository, RoomRepository roomRepository) {
+    public ScreeningServiceImpl(ScreeningRepository screeningRepository, MovieRepository movieRepository, RoomRepository roomRepository, MovieService movieService, RoomService roomService) {
         this.screeningRepository = screeningRepository;
         this.movieRepository = movieRepository;
         this.roomRepository = roomRepository;
+        this.movieService = movieService;
+        this.roomService = roomService;
     }
 
 
@@ -41,51 +49,22 @@ public class ScreeningServiceImpl  implements ScreeningService {
         return screeningRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
-    @Override
-    public Optional<ScreeningDto> getScreeningByMovieAndRoomAndDate(String screeningMovie, String screeningRoom, String screeningDate) {
-        return convertEntityToDto(screeningRepository.findByMovieAndRoomAndDate(screeningMovie,screeningRoom,screeningDate));
-    }
 
     @Override
     public void createScreening(ScreeningDto screeningDto) {
-        Objects.requireNonNull(screeningDto, "Screening cannot be null.");
-        Objects.requireNonNull(screeningDto.getMovieDto(), "Screening movie cannot be null.");
-        Objects.requireNonNull(screeningDto.getRoomDto(),"Screening room cannot be null.");
-        Objects.requireNonNull(screeningDto.getDate(), "Screening date cannot be null.");
-        Movie movie = movieRepository.findByName(screeningDto.getMovieDto().getName())
+        Objects.requireNonNull(screeningDto, "ScreeningDto cannot be null");
+        Objects.requireNonNull(screeningDto.getMovie(), "Movie cannot be null");
+        Objects.requireNonNull(screeningDto.getRoom(), "Room cannot be null");
+        Objects.requireNonNull(screeningDto.getDate(), "Date cannot be null");
+        Movie movie = movieRepository.findByName(screeningDto.getMovie())
                 .orElseThrow(() -> new IllegalArgumentException("The given movie does not exist"));
-        Room room = roomRepository.findByName(screeningDto.getRoomDto().getName())
+        Room room = roomRepository.findByName(screeningDto.getRoom())
                 .orElseThrow(() -> new IllegalArgumentException("The given room does not exist"));
-        Screening screening = new Screening(screeningDto.getMovieDto(), screeningDto.getRoomDto(), screeningDto.getDate());
-        if (isRoomEmpty(screening)) {
-            screeningRepository.save(screening);
-        }
+        Screening screening = new Screening(movie,room, screeningDto.getDate());
+        screeningRepository.save(screening);
     }
 
-    private boolean isRoomEmpty(Screening screening) {
-        List<ScreeningDto> screeningList = screeningRepository
-                .findAll().stream().map(this::convertEntityToDto)
-                .filter(sc -> sc.getRoomDto().getName().equals(screening.getRoom().getName()))
-                .collect(Collectors.toList());
-        for (ScreeningDto screeningDto : screeningList) {
-            int movieLength = screeningDto.getMovieDto().getLength();
-            Date screeningBegin = screeningDto.getDate();
-            Date screeningEnd = screeningBegin;
-            Date screeningEndAndBreak = screeningBegin;
-            screeningEnd = DateUtils.addMinutes(screeningEnd, movieLength);
-            screeningEndAndBreak = DateUtils.addMinutes(screeningEndAndBreak, movieLength + 10);
-            if (screeningBegin.compareTo(screening.getDate()) <= 0 && screening.getDate().compareTo(screeningEnd) < 0) {
-                System.out.println("There is an overlapping screening");
-                return false;
-            }
-            if (screeningBegin.compareTo(screening.getDate()) <= 0
-                    && screening.getDate().compareTo(screeningEndAndBreak) <= 0) {
-                System.out.println("This would start in the break period after another screening in this room");
-                return false;
-            }
-        }
-        return true;
-    }
+
 
     @Override
     public void deleteScreening(String screeningMovie, String screeningRoom, String screeningDate ) {
@@ -95,15 +74,17 @@ public class ScreeningServiceImpl  implements ScreeningService {
         screeningRepository.deleteByMovieAndRoomAndDate(screeningMovie, screeningRoom, screeningDate);
     }
     private ScreeningDto convertEntityToDto(Screening screening) {
-        return ScreeningDto.builder()
-                .withMovie(screening.getMovie())
-                .withRoom(screening.getRoom())
-                .withDate(screening.getDate())
-                .build();
-    }
+    Optional<MovieDto> movieDto = movieService.getMovieByName(screening.getMovie().getName());
+    Optional <RoomDto> roomDto = roomService.getRoomByName(screening.getRoom().getName());
 
+    if (movieDto.isEmpty() || roomDto.isEmpty()){
+        throw new NullPointerException("hiba");
+        }
+    return ScreeningDto.builder()
+            .withMovie(screening.getMovie().getName())
+            .withRoom(screening.getRoom().getName())
+            .withDate(String.valueOf(screening.getDate()))
+            .build();
 
-    private Optional<ScreeningDto> convertEntityToDto(Optional<Screening> screening) {
-        return screening.isEmpty() ? Optional.empty() : Optional.of(convertEntityToDto(screening.get()));
     }
 }

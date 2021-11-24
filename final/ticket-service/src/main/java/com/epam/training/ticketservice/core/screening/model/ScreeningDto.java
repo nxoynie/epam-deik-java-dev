@@ -1,20 +1,16 @@
 package com.epam.training.ticketservice.core.screening.model;
 
-import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
-import com.epam.training.ticketservice.core.room.persistance.entity.Room;
-
-import java.util.Date;
 import java.util.Objects;
 
 public class ScreeningDto {
 
-    private final Movie movieDto;
-    private final Room roomDto;
-    private final Date date;
+    private final String movie;
+    private final String room;
+    private final String date;
 
-    public ScreeningDto(Movie movieDto, Room roomDto, Date date) {
-        this.movieDto = movieDto;
-        this.roomDto = roomDto;
+    public ScreeningDto(String movie, String room, String date) {
+        this.movie = movie;
+        this.room = room;
         this.date = date;
     }
 
@@ -23,15 +19,15 @@ public class ScreeningDto {
         return new Builder();
     }
 
-    public Movie getMovieDto() {
-        return movieDto;
+    public String getMovie() {
+        return movie;
     }
 
-    public Room getRoomDto() {
-        return roomDto;
+    public String getRoom() {
+        return room;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
     @Override
@@ -43,43 +39,43 @@ public class ScreeningDto {
             return false;
         }
         ScreeningDto that = (ScreeningDto) o;
-        return Objects.equals(movieDto, that.movieDto) && Objects.equals(roomDto, that.roomDto) && Objects.equals(date, that.date);
+        return Objects.equals(movie, that.movie) && Objects.equals(room, that.room) && Objects.equals(date, that.date);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(movieDto, roomDto, date);
+        return Objects.hash(movie, room, date);
     }
 
     @Override
     public String toString() {
         return "ScreeningDto{"
-                + "movie=" + movieDto
-                + ", room=" + roomDto
+                + "movie=" + movie
+                + ", room=" + room
                 + ", date=" + date
                 + '}';
     }
     public static class Builder {
-        private Movie movieDto;
-        private Room roomDto;
-        private Date date;
+        private String movie;
+        private String room;
+        private String date;
 
-        public ScreeningDto.Builder withMovie(Movie movieDto) {
-            this.movieDto = movieDto;
+        public Builder withMovie(String movie) {
+            this.movie = movie;
             return this;
         }
 
-        public ScreeningDto.Builder withRoom(Room roomDto) {
-            this.roomDto = roomDto;
+        public Builder withRoom(String room) {
+            this.room = room;
             return this;
         }
-        public ScreeningDto.Builder withDate(Date date) {
+        public ScreeningDto.Builder withDate(String date) {
             this.date = date;
             return this;
         }
 
         public ScreeningDto build() {
-            return new ScreeningDto(movieDto, roomDto, date);
+            return new ScreeningDto(movie, room, date);
         }
     }
 }

@@ -4,10 +4,10 @@ import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
 import com.epam.training.ticketservice.core.room.persistance.entity.Room;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.Objects;
 @Entity
 public class Screening {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -15,16 +15,13 @@ public class Screening {
     public Movie movie;
     @ManyToOne
     private Room room;
-    private Date date;
+    private String date;
 
 
-    public Screening(Movie movie, Room room, Date date) {
+    public Screening(Movie movie, Room room, String date) {
         this.movie = movie;
         this.room = room;
         this.date = date;
-    }
-
-    public Screening() {
     }
 
     public Integer getId() {
@@ -51,11 +48,11 @@ public class Screening {
         this.room = room;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
