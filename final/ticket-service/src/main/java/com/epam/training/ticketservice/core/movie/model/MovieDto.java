@@ -32,12 +32,16 @@ public class MovieDto {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
+        if (this == o) {
             return true;
-        if (o == null || getClass() != o.getClass())
+        }
+        if (o == null || getClass() != o.getClass()) {
             return false;
+        }
         MovieDto movie = (MovieDto) o;
-        return Objects.equals(name, movie.name) && Objects.equals(genre, movie.genre) && Objects.equals(length, movie.length);
+        return Objects.equals(name, movie.name)
+                && Objects.equals(genre, movie.genre)
+                && Objects.equals(length, movie.length);
     }
 
     @Override
@@ -60,11 +64,12 @@ public class MovieDto {
             return this;
         }
 
-        public Builder withGenre (String genre) {
+        public Builder withGenre(String genre) {
             this.genre = genre;
             return this;
         }
-        public Builder withLength (Integer length) {
+
+        public Builder withLength(Integer length) {
             this.length = length;
             return this;
         }

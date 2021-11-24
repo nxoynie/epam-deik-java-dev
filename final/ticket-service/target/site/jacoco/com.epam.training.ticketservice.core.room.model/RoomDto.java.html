@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RoomDto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Ticket Service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.core.room.model</a> &gt; <span class="el_source">RoomDto.java</span></div><h1>RoomDto.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.core.room.model;
+
+import java.util.Objects;
+
+public class RoomDto {
+    private final String name;
+    private final Integer rows;
+    private final Integer columns;
+
+<span class="nc" id="L10">    public RoomDto(String name, Integer rows, Integer columns) {</span>
+<span class="nc" id="L11">        this.name = name;</span>
+<span class="nc" id="L12">        this.rows = rows;</span>
+<span class="nc" id="L13">        this.columns = columns;</span>
+<span class="nc" id="L14">    }</span>
+
+    public static Builder builder() {
+<span class="nc" id="L17">        return new Builder();</span>
+    }
+
+    public String getName() {
+<span class="nc" id="L21">        return name;</span>
+    }
+
+    public Integer getRows() {
+<span class="nc" id="L25">        return rows;</span>
+    }
+
+    public Integer getColumns() {
+<span class="nc" id="L29">        return columns;</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L34">        return Objects.hash(name, rows, columns);</span>
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (this == obj) {</span>
+<span class="nc" id="L40">            return true;</span>
+        }
+<span class="nc bnc" id="L42" title="All 4 branches missed.">        if (obj == null || getClass() != obj.getClass()) {</span>
+<span class="nc" id="L43">            return false;</span>
+        }
+<span class="nc" id="L45">        RoomDto roomDto = (RoomDto) obj;</span>
+<span class="nc bnc" id="L46" title="All 4 branches missed.">        return rows == roomDto.rows</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">                &amp;&amp; columns == roomDto.columns &amp;&amp; Objects.equals(name, roomDto.name);</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L52">        return &quot;RoomDto{&quot; + &quot;name='&quot; + name + '\'' + &quot;, rows=&quot; + rows</span>
+                + &quot;, columns=&quot; + columns + '}';
+    }
+
+<span class="nc" id="L56">    public static class Builder {</span>
+        private String name;
+        private Integer rows;
+        private Integer columns;
+
+        public RoomDto.Builder withName(String name) {
+<span class="nc" id="L62">            this.name = name;</span>
+<span class="nc" id="L63">            return this;</span>
+        }
+
+        public RoomDto.Builder withRows(Integer rows) {
+<span class="nc" id="L67">            this.rows = rows;</span>
+<span class="nc" id="L68">            return this;</span>
+        }
+
+        public RoomDto.Builder withColumns(Integer columns) {
+<span class="nc" id="L72">            this.columns = columns;</span>
+<span class="nc" id="L73">            return this;</span>
+        }
+
+        public RoomDto build() {
+<span class="nc" id="L77">            return new RoomDto(name, rows, columns);</span>
+        }
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

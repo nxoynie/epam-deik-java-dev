@@ -1,6 +1,10 @@
 package com.epam.training.ticketservice.core.room.persistance.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Column;
 import java.util.Objects;
 
 @Entity
@@ -13,10 +17,11 @@ public class Room {
     private Integer rows;
     private Integer columns;
 
-    public Room(){}
+    public Room(){
 
-    public Room(String name, Integer rows, Integer columns){
+    }
 
+    public Room(String name, Integer rows, Integer columns) {
         this.name = name;
         this.rows = rows;
         this.columns = columns;
@@ -25,6 +30,7 @@ public class Room {
     public void setId(Integer id) {
         this.id = id;
     }
+
     public Integer getId() {
         return id;
     }
@@ -32,6 +38,7 @@ public class Room {
     public void setName(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
@@ -39,6 +46,7 @@ public class Room {
     public void setRows(Integer rows) {
         this.rows = rows;
     }
+
     public Integer getRows() {
         return rows;
     }
@@ -46,6 +54,7 @@ public class Room {
     public void setColumns(Integer columns) {
         this.columns = columns;
     }
+
     public Integer getColumns() {
         return columns;
     }

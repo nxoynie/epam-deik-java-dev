@@ -1,6 +1,5 @@
 package com.epam.training.ticketservice.ui.command;
 
-import com.epam.training.ticketservice.core.movie.model.MovieDto;
 import com.epam.training.ticketservice.core.room.RoomService;
 import com.epam.training.ticketservice.core.room.model.RoomDto;
 import com.epam.training.ticketservice.core.user.UserService;
@@ -10,9 +9,8 @@ import org.springframework.shell.Availability;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellMethodAvailability;
-
-import java.util.List;
 import java.util.Optional;
+
 @ShellComponent
 public class RoomCommand {
 
@@ -34,7 +32,7 @@ public class RoomCommand {
 
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "create room", value = "Create a room.")
-    public RoomDto createRoom(String name, Integer rows, Integer columns){
+    public RoomDto createRoom(String name, Integer rows, Integer columns) {
         RoomDto room =  RoomDto.builder()
                 .withName(name)
                 .withRows(rows)

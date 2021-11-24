@@ -42,7 +42,10 @@ public class ScreeningCommand {
         return Availability.unavailable("You are not an admin!");
     }
 
-    public ScreeningCommand(UserService userService, ScreeningService screeningService, MovieService movieService, RoomService roomService) {
+    public ScreeningCommand(UserService userService,
+                            ScreeningService screeningService,
+                            MovieService movieService,
+                            RoomService roomService) {
         this.userService = userService;
         this.screeningService = screeningService;
         this.movieService = movieService;
@@ -53,7 +56,7 @@ public class ScreeningCommand {
 
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "create screening", value = "Create a new screening")
-    public ScreeningDto createScreening(String movie, String room, String dateString){
+    public ScreeningDto createScreening(String movie, String room, String dateString) {
         LocalDateTime date = LocalDateTime.parse(dateString, formatter);
 
         Optional<MovieDto> movieDto = movieService.getMovieByName(movie);
@@ -78,18 +81,19 @@ public class ScreeningCommand {
 
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "delete screening", value = "Delete az existing screening.")
-    public String deleteScreening(String movie, String room, String dateString){
+    public String deleteScreening(String movie, String room, String dateString) {
         LocalDateTime date = LocalDateTime.parse(dateString, formatter);
 
         screeningService.deleteScreening(movie, room, date);
 
-        if(movieService.getMovieByName(movie).isEmpty() || roomService.getRoomByName(room).isEmpty()){
+        if (movieService.getMovieByName(movie).isEmpty() || roomService.getRoomByName(room).isEmpty()) {
             return "Screening does not exist";
-        }else{
+        } else {
             screeningService.deleteScreening(movie, room, date);
             return movie + " deleted successfully.";
         }
     }
+
     @ShellMethod(key = "list screenings", value = "List the screenings")
     public void listScreenings() {
         List<ScreeningDto> screeningList = screeningService.getScreeningList();

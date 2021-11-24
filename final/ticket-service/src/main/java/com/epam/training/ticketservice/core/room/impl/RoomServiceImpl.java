@@ -68,6 +68,7 @@ public class RoomServiceImpl implements RoomService {
                 .withColumns(room.getColumns())
                 .build();
     }
+
     private Optional<RoomDto> convertEntityToDto(Optional<Room> room) {
         return room.isEmpty() ? Optional.empty() : Optional.of(convertEntityToDto(room.get()));
     }

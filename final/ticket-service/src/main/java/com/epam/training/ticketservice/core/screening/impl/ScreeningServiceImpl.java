@@ -2,28 +2,20 @@ package com.epam.training.ticketservice.core.screening.impl;
 
 import com.epam.training.ticketservice.core.movie.MovieService;
 import com.epam.training.ticketservice.core.movie.model.MovieDto;
-import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
-import com.epam.training.ticketservice.core.movie.persistence.repository.MovieRepository;
 import com.epam.training.ticketservice.core.room.RoomService;
 import com.epam.training.ticketservice.core.room.model.RoomDto;
-import com.epam.training.ticketservice.core.room.persistance.entity.Room;
-import com.epam.training.ticketservice.core.room.persistance.repository.RoomRepository;
 import com.epam.training.ticketservice.core.screening.ScreeningService;
 import com.epam.training.ticketservice.core.screening.model.ScreeningDto;
 import com.epam.training.ticketservice.core.screening.persistence.entity.Screening;
 import com.epam.training.ticketservice.core.screening.persistence.repository.ScreeningRepository;
-import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 @Service
 @Transactional
 public class ScreeningServiceImpl  implements ScreeningService {
@@ -32,7 +24,9 @@ public class ScreeningServiceImpl  implements ScreeningService {
     private final MovieService movieService;
     private final RoomService roomService;
 
-    public ScreeningServiceImpl(ScreeningRepository screeningRepository, MovieService movieService, RoomService roomService) {
+    public ScreeningServiceImpl(ScreeningRepository screeningRepository,
+                                MovieService movieService,
+                                RoomService roomService) {
         this.screeningRepository = screeningRepository;
         this.movieService = movieService;
         this.roomService = roomService;
@@ -84,23 +78,23 @@ public class ScreeningServiceImpl  implements ScreeningService {
                 .map(this::convertEntityToDto)
                 .collect(Collectors.toList());
     }
+
     @Override
     public List<ScreeningDto> getScreeningList() {
         return screeningRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());
     }
 
     private ScreeningDto convertEntityToDto(Screening screening) {
-    Optional<MovieDto> movieDto = movieService.getMovieByName(screening.getMovie());
-    Optional <RoomDto> roomDto = roomService.getRoomByName(screening.getRoom());
+        Optional<MovieDto> movieDto = movieService.getMovieByName(screening.getMovie());
+        Optional<RoomDto> roomDto = roomService.getRoomByName(screening.getRoom());
 
-    if (movieDto.isEmpty() || roomDto.isEmpty()){
-        throw new NullPointerException("hiba");
+        if (movieDto.isEmpty() || roomDto.isEmpty()) {
+            throw new NullPointerException("The Movie or Room is non-existent or the date is incorrect.");
         }
-    return ScreeningDto.builder()
+        return ScreeningDto.builder()
             .withMovie(movieDto.get())
             .withRoom(roomDto.get())
             .withDate(screening.getDate())
             .build();
-
     }
 }

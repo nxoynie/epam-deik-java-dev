@@ -65,9 +65,9 @@ public class MovieCommand {
     @ShellMethodAvailability("isAvailable")
     @ShellMethod(key = "delete movie", value = "Deletes a movie.")
     public String deleteMovie(String name) {
-        if(movieService.getMovieByName(name).isEmpty()){
+        if (movieService.getMovieByName(name).isEmpty()) {
             return "Movie does not exist";
-        }else{
+        } else {
             movieService.deleteMovie(name);
             return name + " deleted successfully.";
         }

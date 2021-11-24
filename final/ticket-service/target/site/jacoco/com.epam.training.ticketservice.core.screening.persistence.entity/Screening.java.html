@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Screening.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Ticket Service</a> &gt; <a href="index.source.html" class="el_package">com.epam.training.ticketservice.core.screening.persistence.entity</a> &gt; <span class="el_source">Screening.java</span></div><h1>Screening.java</h1><pre class="source lang-java linenums">package com.epam.training.ticketservice.core.screening.persistence.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import java.time.LocalDateTime;
+import java.util.Objects;
+
+@Entity
+public class Screening {
+
+    @Id
+    @GeneratedValue
+    private Integer id;
+    private String movie;
+    private String room;
+    private LocalDateTime date;
+
+<span class="nc" id="L19">    public Screening(String movie, String room, LocalDateTime date) {</span>
+<span class="nc" id="L20">        this.movie = movie;</span>
+<span class="nc" id="L21">        this.room = room;</span>
+<span class="nc" id="L22">        this.date = date;</span>
+<span class="nc" id="L23">    }</span>
+
+<span class="nc" id="L25">    public Screening() {</span>
+<span class="nc" id="L26">    }</span>
+
+    public Integer getId() {
+<span class="nc" id="L29">        return id;</span>
+    }
+
+    public void setId(Integer id) {
+<span class="nc" id="L33">        this.id = id;</span>
+<span class="nc" id="L34">    }</span>
+
+    public String getMovie() {
+<span class="nc" id="L37">        return movie;</span>
+    }
+
+    public void setMovie(String movie) {
+<span class="nc" id="L41">        this.movie = movie;</span>
+<span class="nc" id="L42">    }</span>
+
+    public String getRoom() {
+<span class="nc" id="L45">        return room;</span>
+    }
+
+    public void setRoom(String room) {
+<span class="nc" id="L49">        this.room = room;</span>
+<span class="nc" id="L50">    }</span>
+
+    public LocalDateTime getDate() {
+<span class="nc" id="L53">        return date;</span>
+    }
+
+    public void setDate(LocalDateTime date) {
+<span class="nc" id="L57">        this.date = date;</span>
+<span class="nc" id="L58">    }</span>
+
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        if (this == o) {</span>
+<span class="nc" id="L63">            return true;</span>
+        }
+<span class="nc bnc" id="L65" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L66">            return false;</span>
+        }
+<span class="nc" id="L68">        Screening screening = (Screening) o;</span>
+<span class="nc bnc" id="L69" title="All 4 branches missed.">        return Objects.equals(id, screening.id) &amp;&amp; Objects.equals(movie, screening.movie)</span>
+<span class="nc bnc" id="L70" title="All 4 branches missed.">                &amp;&amp; Objects.equals(room, screening.room) &amp;&amp; Objects.equals(date, screening.date);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L75">        return Objects.hash(id, movie, room, date);</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L80">        return &quot;Screening{&quot; + &quot;id=&quot; + id + &quot;, movie=&quot; + movie + &quot;, room=&quot; + room</span>
+                + &quot;, date=&quot; + date + '}';
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

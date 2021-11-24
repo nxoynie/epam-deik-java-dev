@@ -1,7 +1,5 @@
 package com.epam.training.ticketservice.core.room.model;
 
-import com.epam.training.ticketservice.core.movie.model.MovieDto;
-
 import java.util.Objects;
 
 public class RoomDto {
@@ -54,6 +52,7 @@ public class RoomDto {
         return "RoomDto{" + "name='" + name + '\'' + ", rows=" + rows
                 + ", columns=" + columns + '}';
     }
+
     public static class Builder {
         private String name;
         private Integer rows;
@@ -64,10 +63,11 @@ public class RoomDto {
             return this;
         }
 
-        public RoomDto.Builder withRows (Integer rows) {
+        public RoomDto.Builder withRows(Integer rows) {
             this.rows = rows;
             return this;
         }
+
         public RoomDto.Builder withColumns(Integer columns) {
             this.columns = columns;
             return this;

@@ -21,7 +21,6 @@ public class ScreeningDto {
         this.date = date;
     }
 
-
     public static Builder builder() {
         return new Builder();
     }
@@ -61,29 +60,30 @@ public class ScreeningDto {
         String screeningStartDateString = date.format(formatter);
         return movie.toString() + ", screened in room " + room.getName() + ", at " + screeningStartDateString;
     }
-        public static class Builder {
-            private MovieDto movie;
-            private RoomDto room;
-            private LocalDateTime date;
 
-            public ScreeningDto.Builder withMovie(MovieDto movie) {
-                this.movie = movie;
-                return this;
-            }
+    public static class Builder {
+        private MovieDto movie;
+        private RoomDto room;
+        private LocalDateTime date;
 
-            public ScreeningDto.Builder withRoom(RoomDto room) {
-                this.room = room;
-                return this;
-            }
+        public ScreeningDto.Builder withMovie(MovieDto movie) {
+            this.movie = movie;
+            return this;
+        }
 
-            public ScreeningDto.Builder withDate(LocalDateTime date) {
-                this.date = date;
-                return this;
-            }
+        public ScreeningDto.Builder withRoom(RoomDto room) {
+            this.room = room;
+            return this;
+        }
 
-            public ScreeningDto build() {
-                return new ScreeningDto(movie, room, date);
-            }
+        public ScreeningDto.Builder withDate(LocalDateTime date) {
+            this.date = date;
+            return this;
+        }
+
+        public ScreeningDto build() {
+            return new ScreeningDto(movie, room, date);
         }
     }
+}
 

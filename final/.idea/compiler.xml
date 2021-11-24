@@ -16,7 +16,7 @@
       <module name="final" options="" />
       <module name="ticket-service" options="-parameters" />
       <module name="ticket-service-acceptance-tests" options="-parameters" />
-      <module name="ticket-service-parent" options="-parameters" />
+      <module name="ticket-service-parent" options="" />
     </option>
   </component>
 </project>

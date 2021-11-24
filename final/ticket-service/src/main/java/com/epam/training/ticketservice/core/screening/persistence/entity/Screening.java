@@ -1,11 +1,11 @@
 package com.epam.training.ticketservice.core.screening.persistence.entity;
 
-import com.epam.training.ticketservice.core.movie.persistence.entity.Movie;
-import com.epam.training.ticketservice.core.room.persistance.entity.Room;
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
 import java.time.LocalDateTime;
 import java.util.Objects;
+
 @Entity
 public class Screening {
 
@@ -16,8 +16,7 @@ public class Screening {
     private String room;
     private LocalDateTime date;
 
-
-    public Screening(String movie, String room, LocalDateTime date){
+    public Screening(String movie, String room, LocalDateTime date) {
         this.movie = movie;
         this.room = room;
         this.date = date;

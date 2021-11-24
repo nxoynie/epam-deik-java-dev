@@ -1,0 +1,25 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Ticket Service,com.epam.training.ticketservice.core.room.impl,RoomServiceImpl,129,0,2,0,29,0,10,0,9,0
+Ticket Service,com.epam.training.ticketservice.ui,ApplicationConfiguration,3,0,0,0,1,0,1,0,1,0
+Ticket Service,com.epam.training.ticketservice.core.screening.model,ScreeningDto.Builder,28,0,0,0,8,0,5,0,5,0
+Ticket Service,com.epam.training.ticketservice.core.screening.model,ScreeningDto,100,0,12,0,19,0,14,0,8,0
+Ticket Service,com.epam.training.ticketservice.core.user.model,UserDto,67,0,10,0,14,0,11,0,6,0
+Ticket Service,com.epam.training.ticketservice.core.movie.impl,MovieServiceImpl,129,0,2,0,29,0,10,0,9,0
+Ticket Service,com.epam.training.ticketservice.ui.command,MovieCommand,84,0,8,0,25,0,10,0,6,0
+Ticket Service,com.epam.training.ticketservice.ui.command,UserCommand,82,0,10,0,25,0,11,0,6,0
+Ticket Service,com.epam.training.ticketservice.ui.command,RoomCommand,112,0,10,0,34,0,12,0,7,0
+Ticket Service,com.epam.training.ticketservice.ui.command,ScreeningCommand,151,0,18,0,38,0,14,0,5,0
+Ticket Service,com.epam.training.ticketservice.core.room.persistance.entity,Room,120,0,14,0,28,0,20,0,13,0
+Ticket Service,com.epam.training.ticketservice.core.screening.persistence.entity,Screening,122,0,14,0,28,0,20,0,13,0
+Ticket Service,com.epam.training.ticketservice.core.user.persistence.entity,User,121,0,14,0,29,0,20,0,13,0
+Ticket Service,com.epam.training.ticketservice.core.user.persistence.entity,User.Role,15,0,0,0,3,0,1,0,1,0
+Ticket Service,com.epam.training.ticketservice.core.room.model,RoomDto,89,0,12,0,18,0,14,0,8,0
+Ticket Service,com.epam.training.ticketservice.core.room.model,RoomDto.Builder,28,0,0,0,8,0,5,0,5,0
+Ticket Service,com.epam.training.ticketservice.core.user.impl,UserServiceImpl,115,0,2,0,30,0,10,0,9,0
+Ticket Service,com.epam.training.ticketservice,Application,8,0,0,0,3,0,2,0,2,0
+Ticket Service,com.epam.training.ticketservice.core.movie.model,MovieDto,91,0,12,0,19,0,14,0,8,0
+Ticket Service,com.epam.training.ticketservice.core.movie.model,MovieDto.Builder,28,0,0,0,8,0,5,0,5,0
+Ticket Service,com.epam.training.ticketservice.core.configuration,InMemoryDatabaseInitializer,82,0,0,0,15,0,2,0,2,0
+Ticket Service,com.epam.training.ticketservice.core.configuration,PromptConfiguration,11,0,0,0,2,0,2,0,2,0
+Ticket Service,com.epam.training.ticketservice.core.screening.impl,ScreeningServiceImpl,207,0,18,0,48,0,15,0,6,0
+Ticket Service,com.epam.training.ticketservice.core.movie.persistence.entity,Movie,122,0,14,0,30,0,20,0,13,0
