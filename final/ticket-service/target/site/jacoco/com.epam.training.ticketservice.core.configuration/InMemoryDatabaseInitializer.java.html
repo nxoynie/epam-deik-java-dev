@@ -22,23 +22,23 @@ public class InMemoryDatabaseInitializer {
 
     public InMemoryDatabaseInitializer(MovieRepository movieRepository,
                                        UserRepository userRepository,
-<span class="nc" id="L25">                                       RoomRepository roomRepository) {</span>
-<span class="nc" id="L26">        this.movieRepository = movieRepository;</span>
-<span class="nc" id="L27">        this.userRepository = userRepository;</span>
-<span class="nc" id="L28">        this.roomRepository = roomRepository;</span>
-<span class="nc" id="L29">    }</span>
+<span class="fc" id="L25">                                       RoomRepository roomRepository) {</span>
+<span class="fc" id="L26">        this.movieRepository = movieRepository;</span>
+<span class="fc" id="L27">        this.userRepository = userRepository;</span>
+<span class="fc" id="L28">        this.roomRepository = roomRepository;</span>
+<span class="fc" id="L29">    }</span>
 
     @PostConstruct
     public void init() {
-<span class="nc" id="L33">        Movie spiritedAway = new Movie(&quot;Spirited Away&quot;, &quot;animation&quot;, 125);</span>
-<span class="nc" id="L34">        Movie theExorcist = new Movie(&quot;The Exorcist&quot;, &quot;horror&quot;, 202);</span>
-<span class="nc" id="L35">        Movie moana = new Movie(&quot;Moana&quot;, &quot;animation&quot;, 106);</span>
-<span class="nc" id="L36">        movieRepository.saveAll(List.of(spiritedAway, theExorcist, moana));</span>
-<span class="nc" id="L37">        Room pedersoli = new Room(&quot;Pedersoli&quot;, 10, 10);</span>
-<span class="nc" id="L38">        Room lumiere = new Room(&quot;Lumiere&quot;, 5,7);</span>
-<span class="nc" id="L39">        roomRepository.saveAll(List.of(pedersoli, lumiere));</span>
-<span class="nc" id="L40">        User admin = new User(&quot;admin&quot;, &quot;admin&quot;, User.Role.ADMIN);</span>
-<span class="nc" id="L41">        userRepository.save(admin);</span>
-<span class="nc" id="L42">    }</span>
+<span class="fc" id="L33">        Movie spiritedAway = new Movie(&quot;Spirited Away&quot;, &quot;animation&quot;, 125);</span>
+<span class="fc" id="L34">        Movie theExorcist = new Movie(&quot;The Exorcist&quot;, &quot;horror&quot;, 202);</span>
+<span class="fc" id="L35">        Movie moana = new Movie(&quot;Moana&quot;, &quot;animation&quot;, 106);</span>
+<span class="fc" id="L36">        movieRepository.saveAll(List.of(spiritedAway, theExorcist, moana));</span>
+<span class="fc" id="L37">        Room pedersoli = new Room(&quot;Pedersoli&quot;, 10, 10);</span>
+<span class="fc" id="L38">        Room lumiere = new Room(&quot;Lumiere&quot;, 5,7);</span>
+<span class="fc" id="L39">        roomRepository.saveAll(List.of(pedersoli, lumiere));</span>
+<span class="fc" id="L40">        User admin = new User(&quot;admin&quot;, &quot;admin&quot;, User.Role.ADMIN);</span>
+<span class="fc" id="L41">        userRepository.save(admin);</span>
+<span class="fc" id="L42">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

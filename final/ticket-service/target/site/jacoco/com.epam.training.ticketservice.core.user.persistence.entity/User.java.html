@@ -24,82 +24,43 @@ public class User {
 <span class="nc" id="L24">    public User() {</span>
 <span class="nc" id="L25">    }</span>
 
-<span class="nc" id="L27">    public User(String username, String password, Role role) {</span>
-<span class="nc" id="L28">        this.username = username;</span>
-<span class="nc" id="L29">        this.password = password;</span>
-<span class="nc" id="L30">        this.role = role;</span>
-<span class="nc" id="L31">    }</span>
-
-    public Integer getId() {
-<span class="nc" id="L34">        return id;</span>
-    }
-
-    public void setId(Integer id) {
-<span class="nc" id="L38">        this.id = id;</span>
-<span class="nc" id="L39">    }</span>
+<span class="fc" id="L27">    public User(String username, String password, Role role) {</span>
+<span class="fc" id="L28">        this.username = username;</span>
+<span class="fc" id="L29">        this.password = password;</span>
+<span class="fc" id="L30">        this.role = role;</span>
+<span class="fc" id="L31">    }</span>
 
     public String getUsername() {
-<span class="nc" id="L42">        return username;</span>
+<span class="fc" id="L34">        return username;</span>
     }
-
-    public void setUsername(String username) {
-<span class="nc" id="L46">        this.username = username;</span>
-<span class="nc" id="L47">    }</span>
-
-    public String getPassword() {
-<span class="nc" id="L50">        return password;</span>
-    }
-
-    public void setPassword(String password) {
-<span class="nc" id="L54">        this.password = password;</span>
-<span class="nc" id="L55">    }</span>
 
     public Role getRole() {
-<span class="nc" id="L58">        return role;</span>
+<span class="fc" id="L38">        return role;</span>
     }
-
-    public void setRole(Role role) {
-<span class="nc" id="L62">        this.role = role;</span>
-<span class="nc" id="L63">    }</span>
 
     @Override
     public boolean equals(Object o) {
-<span class="nc bnc" id="L67" title="All 2 branches missed.">        if (this == o) {</span>
-<span class="nc" id="L68">            return true;</span>
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">        if (this == o) {</span>
+<span class="nc" id="L44">            return true;</span>
         }
-<span class="nc bnc" id="L70" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) {</span>
-<span class="nc" id="L71">            return false;</span>
+<span class="pc bpc" id="L46" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L47">            return false;</span>
         }
-<span class="nc" id="L73">        User user = (User) o;</span>
-<span class="nc bnc" id="L74" title="All 2 branches missed.">        return Objects.equals(id, user.id)</span>
-<span class="nc bnc" id="L75" title="All 2 branches missed.">                &amp;&amp; Objects.equals(username, user.username)</span>
-<span class="nc bnc" id="L76" title="All 4 branches missed.">                &amp;&amp; Objects.equals(password, user.password)</span>
+<span class="fc" id="L49">        User user = (User) o;</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        return Objects.equals(id, user.id)</span>
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">                &amp;&amp; Objects.equals(username, user.username)</span>
+<span class="pc bpc" id="L52" title="2 of 4 branches missed.">                &amp;&amp; Objects.equals(password, user.password)</span>
                 &amp;&amp; role == user.role;
     }
 
     @Override
     public int hashCode() {
-<span class="nc" id="L82">        return Objects.hash(id, username, password, role);</span>
+<span class="nc" id="L58">        return Objects.hash(id, username, password, role);</span>
     }
 
-    @Override
-    public String toString() {
-<span class="nc" id="L87">        return &quot;User{&quot;</span>
-                + &quot;id=&quot;
-                + id
-                + &quot;, username='&quot;
-                + username
-                + '\''
-                + &quot;, password='&quot;
-                + password
-                + '\''
-                + &quot;, role=&quot;
-                + role + '}';
-    }
-
-<span class="nc" id="L100">    public enum Role {</span>
-<span class="nc" id="L101">        USER,</span>
-<span class="nc" id="L102">        ADMIN</span>
+<span class="fc" id="L61">    public enum Role {</span>
+<span class="fc" id="L62">        USER,</span>
+<span class="fc" id="L63">        ADMIN</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

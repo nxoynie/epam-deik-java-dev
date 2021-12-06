@@ -15,4 +15,6 @@ public interface MovieService {
     void updateMovie(MovieDto movie);
 
     void deleteMovie(String movieDto);
+
+    Integer getMovieID(String title);
 }

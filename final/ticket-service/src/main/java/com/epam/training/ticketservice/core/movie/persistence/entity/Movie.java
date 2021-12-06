@@ -31,10 +31,6 @@ public class Movie {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -47,16 +43,8 @@ public class Movie {
         return genre;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
     public Integer getLength() {
         return length;
-    }
-
-    public void setLength(Integer length) {
-        this.length = length;
     }
 
     @Override

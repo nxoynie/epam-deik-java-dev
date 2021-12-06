@@ -27,14 +27,6 @@ public class Room {
         this.columns = columns;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -43,16 +35,8 @@ public class Room {
         return name;
     }
 
-    public void setRows(Integer rows) {
-        this.rows = rows;
-    }
-
     public Integer getRows() {
         return rows;
-    }
-
-    public void setColumns(Integer columns) {
-        this.columns = columns;
     }
 
     public Integer getColumns() {

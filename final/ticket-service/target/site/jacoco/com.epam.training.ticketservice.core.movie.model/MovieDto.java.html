@@ -7,41 +7,41 @@ public class MovieDto {
     private final String genre;
     private final Integer length;
 
-<span class="nc" id="L10">    public MovieDto(String name, String genre, Integer length) {</span>
-<span class="nc" id="L11">        this.name = name;</span>
-<span class="nc" id="L12">        this.genre = genre;</span>
-<span class="nc" id="L13">        this.length = length;</span>
+<span class="fc" id="L10">    public MovieDto(String name, String genre, Integer length) {</span>
+<span class="fc" id="L11">        this.name = name;</span>
+<span class="fc" id="L12">        this.genre = genre;</span>
+<span class="fc" id="L13">        this.length = length;</span>
 
-<span class="nc" id="L15">    }</span>
+<span class="fc" id="L15">    }</span>
 
     public static Builder builder() {
-<span class="nc" id="L18">        return new Builder();</span>
+<span class="fc" id="L18">        return new Builder();</span>
     }
 
     public String getName() {
-<span class="nc" id="L22">        return name;</span>
+<span class="fc" id="L22">        return name;</span>
     }
 
     public String getGenre() {
-<span class="nc" id="L26">        return genre;</span>
+<span class="fc" id="L26">        return genre;</span>
     }
 
     public Integer getLength() {
-<span class="nc" id="L30">        return length;</span>
+<span class="fc" id="L30">        return length;</span>
     }
 
     @Override
     public boolean equals(Object o) {
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (this == o) {</span>
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">        if (this == o) {</span>
 <span class="nc" id="L36">            return true;</span>
         }
-<span class="nc bnc" id="L38" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) {</span>
+<span class="pc bpc" id="L38" title="2 of 4 branches missed.">        if (o == null || getClass() != o.getClass()) {</span>
 <span class="nc" id="L39">            return false;</span>
         }
-<span class="nc" id="L41">        MovieDto movie = (MovieDto) o;</span>
-<span class="nc bnc" id="L42" title="All 2 branches missed.">        return Objects.equals(name, movie.name)</span>
-<span class="nc bnc" id="L43" title="All 2 branches missed.">                &amp;&amp; Objects.equals(genre, movie.genre)</span>
-<span class="nc bnc" id="L44" title="All 2 branches missed.">                &amp;&amp; Objects.equals(length, movie.length);</span>
+<span class="fc" id="L41">        MovieDto movie = (MovieDto) o;</span>
+<span class="pc bpc" id="L42" title="1 of 2 branches missed.">        return Objects.equals(name, movie.name)</span>
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">                &amp;&amp; Objects.equals(genre, movie.genre)</span>
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">                &amp;&amp; Objects.equals(length, movie.length);</span>
     }
 
     @Override
@@ -54,28 +54,28 @@ public class MovieDto {
 <span class="nc" id="L54">        return name + &quot;(&quot; + genre + &quot;,&quot; + length + &quot; minutes)&quot;;</span>
     }
 
-<span class="nc" id="L57">    public static class Builder {</span>
+<span class="fc" id="L57">    public static class Builder {</span>
         private String name;
         private String genre;
         private Integer length;
 
         public Builder withName(String name) {
-<span class="nc" id="L63">            this.name = name;</span>
-<span class="nc" id="L64">            return this;</span>
+<span class="fc" id="L63">            this.name = name;</span>
+<span class="fc" id="L64">            return this;</span>
         }
 
         public Builder withGenre(String genre) {
-<span class="nc" id="L68">            this.genre = genre;</span>
-<span class="nc" id="L69">            return this;</span>
+<span class="fc" id="L68">            this.genre = genre;</span>
+<span class="fc" id="L69">            return this;</span>
         }
 
         public Builder withLength(Integer length) {
-<span class="nc" id="L73">            this.length = length;</span>
-<span class="nc" id="L74">            return this;</span>
+<span class="fc" id="L73">            this.length = length;</span>
+<span class="fc" id="L74">            return this;</span>
         }
 
         public MovieDto build() {
-<span class="nc" id="L78">            return new MovieDto(name, genre, length);</span>
+<span class="fc" id="L78">            return new MovieDto(name, genre, length);</span>
         }
     }
 

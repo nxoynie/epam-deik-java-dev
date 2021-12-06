@@ -47,12 +47,6 @@ public class RoomDto {
                 && columns == roomDto.columns && Objects.equals(name, roomDto.name);
     }
 
-    @Override
-    public String toString() {
-        return "RoomDto{" + "name='" + name + '\'' + ", rows=" + rows
-                + ", columns=" + columns + '}';
-    }
-
     public static class Builder {
         private String name;
         private Integer rows;

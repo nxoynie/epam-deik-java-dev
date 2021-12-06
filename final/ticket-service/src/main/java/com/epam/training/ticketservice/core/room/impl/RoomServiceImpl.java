@@ -45,13 +45,10 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public void updateRoom(RoomDto roomDto) {
-        Objects.requireNonNull(roomDto, "Room cannot be null.");
-        Objects.requireNonNull(roomDto.getName(), "Room name cannot be null.");
-        Room roomtoChange = roomRepository.findByName(roomDto.getName())
-                .orElseThrow(() -> new IllegalArgumentException("The given room does not exist."));
-        roomtoChange.setRows(roomDto.getRows());
-        roomtoChange.setColumns(roomDto.getColumns());
-        roomRepository.save(roomtoChange);
+        Objects.requireNonNull(roomDto, "Room cannot be null");
+        Objects.requireNonNull(roomDto.getName(), "Room name cannot be null");
+
+        roomRepository.updateRoom(roomDto.getName(), roomDto.getRows(), roomDto.getColumns());
     }
 
     @Override
