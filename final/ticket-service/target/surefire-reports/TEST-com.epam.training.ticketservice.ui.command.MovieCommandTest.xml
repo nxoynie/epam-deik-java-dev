@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.078" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.epam.training.ticketservice.ui.command.MovieCommandTest" time="0.039" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -57,20 +57,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="testUpdateMovieShouldThrowNullPointerExceptionWhenMovieNameIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.006"/>
-  <testcase name="testCreateMovieShouldThrowNullPointerExceptionWhenMovieNameIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.002"/>
-  <testcase name="testDeleteMovieShouldThrowNullPointerExceptionWhenMovieNameIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.001"/>
-  <testcase name="testDeleteMovieShouldCallMovieRepositoryWhenTheInputMovieIsValid" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.007"/>
-  <testcase name="testUpdateMovieShouldThrowNullPointerExceptionWhenMovieGenreIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.001"/>
-  <testcase name="testCreateMovieShouldThrowNullPointerExceptionWhenMovieGenreIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.001"/>
-  <testcase name="testUpdateMovieShouldThrowNullPointerExceptionWhenMovieIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.005"/>
-  <testcase name="testGetMovieIdShouldThrowNullPointerExceptionWhenMovieNonexistent" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.016"/>
-  <testcase name="testUpdateMovieShouldCallMovieRepositoryWhenTheInputMovieIsValid" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.002"/>
-  <testcase name="testGetMovieByNameShouldReturnAMoanaDtoWhenTheMovieExists" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.003"/>
-  <testcase name="testGetMovieByNameShouldReturnOptionalEmptyWhenInputMovieNameIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.004"/>
-  <testcase name="testGetMovieByNameShouldReturnOptionalEmptyWhenInputMovieNameDoesNotExist" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.002"/>
-  <testcase name="testGetMovieListShouldCallMovieRepositoryAndReturnListofMovies" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.004"/>
-  <testcase name="testCreateMovieShouldCallMovieRepositoryWhenTheInputMovieIsValid" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.002"/>
-  <testcase name="testGetMovieIdShouldReturnInteger" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.001"/>
-  <testcase name="testCreateMovieShouldThrowNullPointerExceptionWhenMovieIsNull" classname="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" time="0.001"/>
+  <testcase name="testCreateMovie" classname="com.epam.training.ticketservice.ui.command.MovieCommandTest" time="0"/>
+  <testcase name="testIsAvailableUser" classname="com.epam.training.ticketservice.ui.command.MovieCommandTest" time="0.004"/>
+  <testcase name="testIsAvailableAdmin" classname="com.epam.training.ticketservice.ui.command.MovieCommandTest" time="0.001"/>
+  <testcase name="testListMoviesShouldReturnCorrectListOfExistingMovies" classname="com.epam.training.ticketservice.ui.command.MovieCommandTest" time="0.001"/>
+  <testcase name="testIsAvailableNotLoggedIn" classname="com.epam.training.ticketservice.ui.command.MovieCommandTest" time="0.001"/>
+  <testcase name="testListMoviesShouldReturnEmptyList" classname="com.epam.training.ticketservice.ui.command.MovieCommandTest" time="0.001"/>
 </testsuite>

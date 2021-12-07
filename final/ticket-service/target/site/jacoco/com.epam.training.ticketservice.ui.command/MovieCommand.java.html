@@ -18,34 +18,34 @@ public class MovieCommand {
     private final UserService userService;
     private final MovieService movieService;
 
-<span class="nc" id="L21">    public MovieCommand(MovieService movieService, UserService userService) {</span>
-<span class="nc" id="L22">        this.movieService = movieService;</span>
-<span class="nc" id="L23">        this.userService = userService;</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L21">    public MovieCommand(MovieService movieService, UserService userService) {</span>
+<span class="fc" id="L22">        this.movieService = movieService;</span>
+<span class="fc" id="L23">        this.userService = userService;</span>
+<span class="fc" id="L24">    }</span>
 
     private Availability isAvailable() {
-<span class="nc" id="L27">        Optional&lt;UserDto&gt; user = userService.describeAccount();</span>
-<span class="nc bnc" id="L28" title="All 4 branches missed.">        if (user.isPresent() &amp;&amp; user.get().getRole() == User.Role.ADMIN) {</span>
-<span class="nc" id="L29">            return Availability.available();</span>
+<span class="fc" id="L27">        Optional&lt;UserDto&gt; user = userService.describeAccount();</span>
+<span class="fc bfc" id="L28" title="All 4 branches covered.">        if (user.isPresent() &amp;&amp; user.get().getRole() == User.Role.ADMIN) {</span>
+<span class="fc" id="L29">            return Availability.available();</span>
         }
-<span class="nc" id="L31">        return Availability.unavailable(&quot;You are not an admin!&quot;);</span>
+<span class="fc" id="L31">        return Availability.unavailable(&quot;You are not an admin!&quot;);</span>
     }
 
     @ShellMethodAvailability(&quot;isAvailable&quot;)
     @ShellMethod(key = &quot;create movie&quot;, value = &quot;Create a movie.&quot;)
     public MovieDto createMovie(String name, String genre, Integer length) {
-<span class="nc" id="L37">        MovieDto movie = MovieDto.builder()</span>
-<span class="nc" id="L38">                .withName(name)</span>
-<span class="nc" id="L39">                .withGenre(genre)</span>
-<span class="nc" id="L40">                .withLength(length)</span>
-<span class="nc" id="L41">                .build();</span>
-<span class="nc" id="L42">        movieService.createMovie(movie);</span>
-<span class="nc" id="L43">        return movie;</span>
+<span class="fc" id="L37">        MovieDto movie = MovieDto.builder()</span>
+<span class="fc" id="L38">                .withName(name)</span>
+<span class="fc" id="L39">                .withGenre(genre)</span>
+<span class="fc" id="L40">                .withLength(length)</span>
+<span class="fc" id="L41">                .build();</span>
+<span class="fc" id="L42">        movieService.createMovie(movie);</span>
+<span class="fc" id="L43">        return movie;</span>
     }
 
     @ShellMethod(key = &quot;list movies&quot;, value = &quot;List all available movies&quot;)
     public List&lt;MovieDto&gt; listAvailableMovies() {
-<span class="nc" id="L48">        return movieService.getMovieList();</span>
+<span class="fc" id="L48">        return movieService.getMovieList();</span>
     }
 
     @ShellMethodAvailability(&quot;isAvailable&quot;)
