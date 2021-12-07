@@ -5,36 +5,119 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="735c6007-a6dd-4abf-a5ca-a788d089b24b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_27.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/movie/impl/MovieServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/movie/impl/MovieServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/target/failsafe-reports/failsafe-summary.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/java/com/training/epam/ticketservice/at/GenericCliProcessStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/java/com/training/epam/ticketservice/at/GenericCliProcessStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/ticket-service-acceptance-tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service-acceptance-tests/ticket-service-acceptance-tests.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service-parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/InMemoryDatabaseInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/InMemoryDatabaseInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/PromptConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/configuration/PromptConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/model/MovieDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/core/movie/model/MovieDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/movie/persistence/entity/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/movie/persistence/entity/MovieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/room/persistance/entity/RoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/room/persistance/entity/RoomTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/screening/persistence/entity/ScreeningTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/screening/persistence/entity/ScreeningTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/user/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/user/impl/UserServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/user/persistence/entity/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/user/persistence/entity/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/room/impl/RoomServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/room/impl/RoomServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/screening/impl/ScreeningServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/screening/impl/ScreeningServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/ui/command/MovieCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/ui/command/MovieCommandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/checkstyle-cachefile" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/checkstyle-cachefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/checkstyle-result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/checkstyle-result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/failsafe-reports/failsafe-summary.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/InMemoryDatabaseInitializer.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/InMemoryDatabaseInitializer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/InMemoryDatabaseInitializer.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/InMemoryDatabaseInitializer.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/PromptConfiguration.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/PromptConfiguration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/PromptConfiguration.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/PromptConfiguration.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.configuration/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/MovieServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/MovieServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/MovieServiceImpl.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/MovieServiceImpl.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.impl/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/MovieDto$Builder.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/MovieDto$Builder.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/MovieDto.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/MovieDto.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/MovieDto.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/MovieDto.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.model/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/Movie.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/Movie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/Movie.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/Movie.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.movie.persistence.entity/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/RoomServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/RoomServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/RoomServiceImpl.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/RoomServiceImpl.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.impl/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/RoomDto$Builder.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/RoomDto$Builder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/RoomDto.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/RoomDto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/RoomDto.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/RoomDto.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.model/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/Room.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/Room.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/Room.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/Room.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.room.persistance.entity/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/OccupiedRoomException.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/OccupiedRoomException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/OccupiedRoomException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/OccupiedRoomException.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/ScreeningBreakException.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/ScreeningBreakException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/ScreeningBreakException.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/ScreeningBreakException.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.exception/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/ScreeningServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/ScreeningServiceImpl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/ScreeningServiceImpl.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/ScreeningServiceImpl.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.impl/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/ScreeningDto$Builder.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/ScreeningDto$Builder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/ScreeningDto.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/ScreeningDto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/ScreeningDto.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/ScreeningDto.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.model/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/Screening.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/Screening.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/Screening.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/Screening.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.screening.persistence.entity/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/UserServiceImpl.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/UserServiceImpl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/UserServiceImpl.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/UserServiceImpl.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.impl/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/UserDto.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/UserDto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/UserDto.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/UserDto.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.model/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/User$Role.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/User$Role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/User.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/User.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.core.user.persistence.entity/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/MovieCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/MovieCommand.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/MovieCommand.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/MovieCommand.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/RoomCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/RoomCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/RoomCommand.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/RoomCommand.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/ScreeningCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/ScreeningCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/ScreeningCommand.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/ScreeningCommand.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/UserCommand.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/UserCommand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/UserCommand.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/UserCommand.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice.ui.command/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/Application.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/Application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/Application.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/Application.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/com.epam.training.ticketservice/index.source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/jacoco.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/2021-12-06T23-30-49_722.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/2021-12-07T01-28-27_215.dumpstream" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.configuration.InMemoryDatabaseInitializerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.configuration.InMemoryDatabaseInitializerTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.movie.persistence.entity.MovieTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.movie.persistence.entity.MovieTest.xml" afterDir="false" />
@@ -45,6 +128,7 @@
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.user.impl.UserServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.user.impl.UserServiceImplTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.user.model.UserDtoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.user.model.UserDtoTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.user.persistence.entity.UserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.core.user.persistence.entity.UserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.ui.command.MovieCommandTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/TEST-com.epam.training.ticketservice.ui.command.MovieCommandTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.configuration.InMemoryDatabaseInitializerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.configuration.InMemoryDatabaseInitializerTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.movie.persistence.entity.MovieTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.movie.persistence.entity.MovieTest.txt" afterDir="false" />
@@ -55,7 +139,9 @@
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.user.impl.UserServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.user.impl.UserServiceImplTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.user.model.UserDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.user.model.UserDtoTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.user.persistence.entity.UserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.core.user.persistence.entity.UserTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/ticket-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/ticket-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.ui.command.MovieCommandTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/target/surefire-reports/com.epam.training.ticketservice.ui.command.MovieCommandTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/target/ticket-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/ticket-service/ticket-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/final/ticket-service/ticket-service.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,82 +205,98 @@
       <recent name="com.epam.training.ticketservice.core.configuration" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MovieCommandTest">
-    <configuration name="MovieCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ticket-service" />
+  <component name="RunManager" selected="Cucumber Java.Feature: screenings">
+    <configuration name="Feature: accounts" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/accounts.feature" />
+      <option name="GLUE" value="com.training.epam.ticketservice.at" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ticket-service-acceptance-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: accounts" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.training.ticketservice.ui.command.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.training.ticketservice.ui.command" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.training.ticketservice.ui.command.MovieCommandTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieCommandTest.testDeleteMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ticket-service" />
+    <configuration name="Feature: movies" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature" />
+      <option name="GLUE" value="com.training.epam.ticketservice.at" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ticket-service-acceptance-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: movies" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.training.ticketservice.ui.command.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.training.ticketservice.ui.command" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.training.ticketservice.ui.command.MovieCommandTest" />
-      <option name="METHOD_NAME" value="testDeleteMovie" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieCommandTest.testIsAvailableAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ticket-service" />
+    <configuration name="Feature: pricing" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/pricing.feature" />
+      <option name="GLUE" value="com.training.epam.ticketservice.at" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ticket-service-acceptance-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: pricing" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.training.ticketservice.ui.command.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.training.ticketservice.ui.command" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.training.ticketservice.ui.command.MovieCommandTest" />
-      <option name="METHOD_NAME" value="testIsAvailableAdmin" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieCommandTest.testIsAvailableUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ticket-service" />
+    <configuration name="Feature: rooms" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/rooms.feature" />
+      <option name="GLUE" value="com.training.epam.ticketservice.at" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ticket-service-acceptance-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: rooms" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.training.ticketservice.ui.command.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.training.ticketservice.ui.command" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.training.ticketservice.ui.command.MovieCommandTest" />
-      <option name="METHOD_NAME" value="testIsAvailableUser" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieCommandTest.testListMoviesWithSavedMovies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ticket-service" />
+    <configuration name="Feature: screenings" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature" />
+      <option name="GLUE" value="com.training.epam.ticketservice.at" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="ticket-service-acceptance-tests" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: screenings" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.training.ticketservice.ui.command.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epam.training.ticketservice.ui.command" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.training.ticketservice.ui.command.MovieCommandTest" />
-      <option name="METHOD_NAME" value="testListMoviesWithSavedMovies" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,11 +321,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MovieCommandTest" />
-        <item itemvalue="JUnit.MovieCommandTest.testIsAvailableAdmin" />
-        <item itemvalue="JUnit.MovieCommandTest.testIsAvailableUser" />
-        <item itemvalue="JUnit.MovieCommandTest.testListMoviesWithSavedMovies" />
-        <item itemvalue="JUnit.MovieCommandTest.testDeleteMovie" />
+        <item itemvalue="Cucumber Java.Feature: screenings" />
+        <item itemvalue="Cucumber Java.Feature: rooms" />
+        <item itemvalue="Cucumber Java.Feature: pricing" />
+        <item itemvalue="Cucumber Java.Feature: accounts" />
+        <item itemvalue="Cucumber Java.Feature: movies" />
       </list>
     </recent_temporary>
   </component>
@@ -241,6 +343,8 @@
       <workItem from="1638788692359" duration="213000" />
       <workItem from="1638788931422" duration="3221000" />
       <workItem from="1638792924857" duration="19166000" />
+      <workItem from="1638836791183" duration="3820000" />
+      <workItem from="1638840751378" duration="1434000" />
     </task>
     <servers />
   </component>
@@ -297,7 +401,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/ui/command/MovieCommandTest.java</url>
           <line>23</line>
-          <properties class="com.epam.training.ticketservice.ui.command.MovieCommandTest" method="createMovie">
+          <properties class="com.epam.training.ticketservice.ui.command.MovieCommandTest">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="10" />
@@ -309,6 +413,24 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/movie/impl/MovieServiceImplTest.java</url>
+          <line>35</line>
+          <properties class="com.epam.training.ticketservice.core.movie.impl.MovieServiceImplTest" method="testGetMovieListShouldCallMovieRepositoryAndReturnListofMovies">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/final/ticket-service/src/main/java/com/epam/training/ticketservice/Application.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/final/ticket-service/src/test/java/com/epam/training/ticketservice/core/room/impl/RoomServiceImplTest.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -37,7 +37,7 @@ class ScreeningServiceImplTest {
 
     private static final RoomDto PEDERSOLI_DTO = RoomDto.builder()
             .withName("Pedersoli")
-            .withRows(10)
+            .withRows(20)
             .withColumns(10)
             .build();
 

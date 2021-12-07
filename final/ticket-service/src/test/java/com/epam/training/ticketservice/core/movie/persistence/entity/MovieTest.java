@@ -22,7 +22,7 @@ class MovieTest {
 
     @Test
     public void testConstructor() {
-        Movie underTest = new Movie("Spirited Away", "animation", 125);
+        Movie underTest = new Movie("Sátántangó", "drama", 450);
         assertNotNull(underTest);
     }
 

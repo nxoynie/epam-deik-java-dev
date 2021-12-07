@@ -81,12 +81,12 @@ class MovieCommandTest {
         //Given
         List<MovieDto> list = List.of(
                 MovieDto.builder()
-                        .withName("Spirited Away")
-                        .withGenre("animation")
-                        .withLength(125)
+                        .withName("Sátántangó")
+                        .withGenre("drama")
+                        .withLength(150)
                         .build());
         when(movieService.getMovieList()).thenReturn(list);
-        String expected = "[Spirited Away(animation,125 minutes)]";
+        String expected = "[Sátántangó (drama, 150 minutes)]";
 
         //When
         String actual = underTest.listAvailableMovies().toString();
