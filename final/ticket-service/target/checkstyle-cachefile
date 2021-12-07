@@ -1,4 +1,4 @@
-#Tue Dec 07 02:55:25 CET 2021
+#Tue Dec 07 12:56:05 CET 2021
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\movie\\model\\MovieDto.java=1638838518593
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\room\\RoomService.java=1638826922283
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\resources\\application-prod.properties=1637509006211
@@ -7,7 +7,6 @@ D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\trai
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\screening\\exception\\ScreeningBreakException.java=1638742412821
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\resources\\application.properties=1637420362144
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\configuration\\InMemoryDatabaseInitializer.java=1638842040901
-D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\user\\model\\UserDto.java=1637922890346
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\screening\\impl\\ScreeningServiceImpl.java=1638795787451
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\core\\room\\persistance\\repository\\RoomRepository.java=1638794641794
 D\:\\epam-deik-java-dev\\final\\ticket-service\\src\\main\\java\\com\\epam\\training\\ticketservice\\ui\\command\\ScreeningCommand.java=1637922890347
