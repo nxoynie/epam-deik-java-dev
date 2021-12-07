@@ -4,10 +4,10 @@ ticket-service,com.epam.training.ticketservice.core.screening.model,ScreeningDto
 ticket-service,com.epam.training.ticketservice.core.screening.model,ScreeningDto,41,59,6,6,6,13,8,6,2,6
 ticket-service,com.epam.training.ticketservice.core.user.model,UserDto,46,19,10,0,7,7,7,4,2,4
 ticket-service,com.epam.training.ticketservice.core.movie.impl,MovieServiceImpl,0,135,0,4,0,31,0,11,0,9
-ticket-service,com.epam.training.ticketservice.ui.command,MovieCommand,38,46,4,4,9,16,4,6,2,4
+ticket-service,com.epam.training.ticketservice.ui.command,MovieCommand,38,80,4,8,9,23,4,8,2,4
 ticket-service,com.epam.training.ticketservice.ui.command,UserCommand,82,0,10,0,25,0,11,0,6,0
 ticket-service,com.epam.training.ticketservice.ui.command,RoomCommand,112,0,10,0,34,0,12,0,7,0
-ticket-service,com.epam.training.ticketservice.ui.command,ScreeningCommand,151,0,18,0,38,0,14,0,5,0
+ticket-service,com.epam.training.ticketservice.ui.command,ScreeningCommand,129,0,10,0,34,0,10,0,5,0
 ticket-service,com.epam.training.ticketservice.core.room.persistance.entity,Room,46,59,7,7,8,13,11,5,4,5
 ticket-service,com.epam.training.ticketservice.core.screening.exception,ScreeningBreakException,0,4,0,0,0,2,0,1,0,1
 ticket-service,com.epam.training.ticketservice.core.screening.exception,OccupiedRoomException,0,4,0,0,0,2,0,1,0,1

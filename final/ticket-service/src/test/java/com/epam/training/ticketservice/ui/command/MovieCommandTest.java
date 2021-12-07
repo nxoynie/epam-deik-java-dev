@@ -86,10 +86,10 @@ class MovieCommandTest {
                         .withLength(150)
                         .build());
         when(movieService.getMovieList()).thenReturn(list);
-        String expected = "[Sátántangó (drama, 150 minutes)]";
+        String expected = "Sátántangó (drama, 150 minutes)";
 
         //When
-        String actual = underTest.listAvailableMovies().toString();
+        String actual = underTest.listMovies();
 
         //Then
         assertEquals(expected, actual);
@@ -100,10 +100,10 @@ class MovieCommandTest {
     public void testListMoviesShouldReturnEmptyList() {
         //Given
         when(movieService.getMovieList()).thenReturn(List.of());
-        String expected = "[]";
+        String expected = "There are no movies at the moment";
 
         //When
-        String actual = underTest.listAvailableMovies().toString();
+        String actual = underTest.listMovies();
 
         //Then
         assertEquals(expected, actual);

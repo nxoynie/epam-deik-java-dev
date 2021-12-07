@@ -29,6 +29,7 @@ class ScreeningServiceImplTest {
             .withGenre("animation")
             .withLength(125)
             .build();
+
     private static final MovieDto MOANA_DTO = MovieDto.builder()
             .withName("Moana")
             .withGenre("animation")
@@ -109,7 +110,7 @@ class ScreeningServiceImplTest {
     }
 
     @Test
-    void createScreeningShouldCallScreeningRepositoryWhenTheInputScreeningIsValid() {
+    void createScreeningShouldCallScreeningRepositoryWhenTheInputScreeningIsValid() throws ScreeningBreakException, OccupiedRoomException {
         // Given
         when(screeningRepository.save(MOANA_SCREENING_ENTITY)).thenReturn(MOANA_SCREENING_ENTITY);
 
@@ -192,7 +193,7 @@ class ScreeningServiceImplTest {
     }
 
     @Test
-    void testCreateScreeningShouldThrowScreeningBreakExceptionWhenAScreeningStartsExactlyAtTheEndOfABreak() {
+    void testCreateScreeningShouldThrowScreeningBreakExceptionWhenAScreeningStartsExactlyAtTheEndOfABreak() throws ScreeningBreakException{
         // Given
         when(screeningRepository.findByRoom("Pedersoli")).thenReturn(List.of(SPIRITED_AWAY_SCREENING_ENTITY));
         when(movieService.getMovieByName("Spirited Away")).thenReturn(Optional.of(SPIRITED_AWAY_DTO));

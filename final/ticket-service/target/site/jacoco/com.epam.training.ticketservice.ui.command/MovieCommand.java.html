@@ -44,32 +44,40 @@ public class MovieCommand {
     }
 
     @ShellMethod(key = &quot;list movies&quot;, value = &quot;List all available movies&quot;)
-    public List&lt;MovieDto&gt; listAvailableMovies() {
-<span class="fc" id="L48">        return movieService.getMovieList();</span>
+    public String listMovies() {
+<span class="fc" id="L48">        List&lt;MovieDto&gt; movies = movieService.getMovieList();</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        if (movies.size() == 0) {</span>
+<span class="fc" id="L50">            return &quot;There are no movies at the moment&quot;;</span>
+        }
+<span class="fc" id="L52">        StringBuilder buffer = new StringBuilder();</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        for (MovieDto movie : movies) {</span>
+<span class="fc" id="L54">            buffer.append(movie).append(&quot;\n&quot;);</span>
+<span class="fc" id="L55">        }</span>
+<span class="fc" id="L56">        return buffer.deleteCharAt(buffer.length() - 1).toString();</span>
     }
 
     @ShellMethodAvailability(&quot;isAvailable&quot;)
     @ShellMethod(key = &quot;update movie&quot;, value = &quot;Update and existing movie.&quot;)
     public void updateMovie(String name, String genre, Integer length) {
-<span class="nc" id="L54">        MovieDto movieDto = new MovieDto(</span>
+<span class="nc" id="L62">        MovieDto movieDto = new MovieDto(</span>
                 name,
                 genre,
                 length);
-<span class="nc bnc" id="L58" title="All 2 branches missed.">        if (movieService.getMovieByName(movieDto.getName()).isEmpty()) {</span>
-<span class="nc" id="L59">            System.out.println(&quot;Movie does not exist&quot;);</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        if (movieService.getMovieByName(movieDto.getName()).isEmpty()) {</span>
+<span class="nc" id="L67">            System.out.println(&quot;Movie does not exist&quot;);</span>
         } else {
-<span class="nc" id="L61">            movieService.updateMovie(movieDto);</span>
+<span class="nc" id="L69">            movieService.updateMovie(movieDto);</span>
         }
-<span class="nc" id="L63">    }</span>
+<span class="nc" id="L71">    }</span>
 
     @ShellMethodAvailability(&quot;isAvailable&quot;)
     @ShellMethod(key = &quot;delete movie&quot;, value = &quot;Deletes a movie.&quot;)
     public String deleteMovie(String name) {
-<span class="nc bnc" id="L68" title="All 2 branches missed.">        if (movieService.getMovieByName(name).isEmpty()) {</span>
-<span class="nc" id="L69">            return &quot;Movie does not exist&quot;;</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">        if (movieService.getMovieByName(name).isEmpty()) {</span>
+<span class="nc" id="L77">            return &quot;Movie does not exist&quot;;</span>
         } else {
-<span class="nc" id="L71">            movieService.deleteMovie(name);</span>
-<span class="nc" id="L72">            return name + &quot; deleted successfully.&quot;;</span>
+<span class="nc" id="L79">            movieService.deleteMovie(name);</span>
+<span class="nc" id="L80">            return name + &quot; deleted successfully.&quot;;</span>
         }
     }
 }

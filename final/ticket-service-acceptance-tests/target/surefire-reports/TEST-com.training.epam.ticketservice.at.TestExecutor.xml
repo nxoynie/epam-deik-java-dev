@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="17" failures="2" name="com.training.epam.ticketservice.at.TestExecutor" time="586.245" errors="1" skipped="0">
+<testsuite tests="17" failures="0" name="com.training.epam.ticketservice.at.TestExecutor" time="335.019" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="idea.version" value="2021.2.3"/>
@@ -60,52 +60,21 @@
     <property name="java.vendor.version" value="Corretto-15.0.2.7.1"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="allow creating accounts and logging in" name="the admin account exists by default and can be logged in with the correct password" time="18.216"/>
-  <testcase classname="allow creating accounts and logging in" name="the admin account can be signed out" time="17.132"/>
-  <testcase classname="allow creating accounts and logging in" name="the admin account can not be logged in with incorrect password" time="13.992"/>
-  <testcase classname="allows creating movie descriptions" name="an admin user can create and list movies" time="21.066"/>
-  <testcase classname="allows creating movie descriptions" name="an admin user can update a movie" time="14.206"/>
-  <testcase classname="allows creating movie descriptions" name="an admin user can delete a movie" time="264.05">
-    <error type="java.util.concurrent.TimeoutException">java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
-	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:155)
-	at com.training.epam.ticketservice.at.ProcessUnderTest.runWithTimeout(ProcessUnderTest.java:87)
-	at com.training.epam.ticketservice.at.ProcessUnderTest.readNextLine(ProcessUnderTest.java:47)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:42)
-	at ✽.the next line of the output is &quot;There are no movies at the moment&quot;(file:///D:/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/movies.feature:27)
-</error>
-  </testcase>
-  <testcase classname="allows creating movie descriptions" name="an unauthenticated user can list movies" time="14.082"/>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can create and list rooms" time="11.554"/>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can update a room" time="14.026"/>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can delete a room" time="14.048"/>
-  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an unauthenticated user can list rooms" time="14.038"/>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can create and query screenings" time="29.387"/>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create overlapping screenings in the same room" time="26.596">
-    <failure message="
-Expected: &quot;There is an overlapping screening&quot;
-     but: was &quot;&amp;#27;[31mThere is an overlapping screening&amp;#27;[0m&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;There is an overlapping screening&quot;
-     but: was &quot;&amp;#27;[31mThere is an overlapping screening&amp;#27;[0m&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;There is an overlapping screening&quot;(file:///D:/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:26)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create overlapping screenings in different rooms" time="29.125"/>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create screenings during a 10 minute long breaks after another screening in the same room" time="26.571">
-    <failure message="
-Expected: &quot;This would start in the break period after another screening in this room&quot;
-     but: was &quot;&amp;#27;[31mThis would start in the break period after another screening in this room&amp;#27;[0m&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: &quot;This would start in the break period after another screening in this room&quot;
-     but: was &quot;&amp;#27;[31mThis would start in the break period after another screening in this room&amp;#27;[0m&quot;
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
-	at com.training.epam.ticketservice.at.GenericCliProcessStepDefs.theNextLineOfOutputContains(GenericCliProcessStepDefs.java:43)
-	at ✽.the next line of the output is &quot;This would start in the break period after another screening in this room&quot;(file:///D:/epam-deik-java-dev/final/ticket-service-acceptance-tests/src/test/resources/features/screenings.feature:44)
-</failure>
-  </testcase>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create screenings even if there is a break after a screening in a different room" time="29.07"/>
-  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can delete screenings" time="29.086"/>
+  <testcase classname="allow creating accounts and logging in" name="the admin account exists by default and can be logged in with the correct password" time="10.445"/>
+  <testcase classname="allow creating accounts and logging in" name="the admin account can be signed out" time="12.653"/>
+  <testcase classname="allow creating accounts and logging in" name="the admin account can not be logged in with incorrect password" time="10.445"/>
+  <testcase classname="allows creating movie descriptions" name="an admin user can create and list movies" time="12.688"/>
+  <testcase classname="allows creating movie descriptions" name="an admin user can update a movie" time="14.816"/>
+  <testcase classname="allows creating movie descriptions" name="an admin user can delete a movie" time="16.14"/>
+  <testcase classname="allows creating movie descriptions" name="an unauthenticated user can list movies" time="15.344"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can create and list rooms" time="13.306"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can update a room" time="15.864"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an admin user can delete a room" time="15.164"/>
+  <testcase classname="allow creating, reading, updating and deleting rooms where the screenings will happen" name="an unauthenticated user can list rooms" time="15.253"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can create and query screenings" time="30.278"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create overlapping screenings in the same room" time="30.296"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create overlapping screenings in different rooms" time="30.213"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can not create screenings during a 10 minute long breaks after another screening in the same room" time="30.405"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin can create screenings even if there is a break after a screening in a different room" time="30.811"/>
+  <testcase classname="allows creating, deleting and listing screenings" name="The admin user can delete screenings" time="30.898"/>
 </testsuite>
