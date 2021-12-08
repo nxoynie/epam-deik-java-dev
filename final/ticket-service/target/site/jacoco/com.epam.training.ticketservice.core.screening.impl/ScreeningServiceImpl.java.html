@@ -28,76 +28,77 @@ public class ScreeningServiceImpl  implements ScreeningService {
     private static final String BREAK_TIME_CONFLICT =
             &quot;This would start in the break period after another screening in this room&quot;;
     private static final String OVERLAPPING_TIME = &quot;There is an overlapping screening&quot;;
+
     public ScreeningServiceImpl(ScreeningRepository screeningRepository,
                                 MovieService movieService,
-<span class="fc" id="L33">                                RoomService roomService) {</span>
-<span class="fc" id="L34">        this.screeningRepository = screeningRepository;</span>
-<span class="fc" id="L35">        this.movieService = movieService;</span>
-<span class="fc" id="L36">        this.roomService = roomService;</span>
-<span class="fc" id="L37">    }</span>
+<span class="fc" id="L34">                                RoomService roomService) {</span>
+<span class="fc" id="L35">        this.screeningRepository = screeningRepository;</span>
+<span class="fc" id="L36">        this.movieService = movieService;</span>
+<span class="fc" id="L37">        this.roomService = roomService;</span>
+<span class="fc" id="L38">    }</span>
 
     @Override
     public void createScreening(ScreeningDto screeningDto) throws ScreeningBreakException, OccupiedRoomException {
-<span class="fc" id="L41">        Objects.requireNonNull(screeningDto, &quot;Screening cannot be null&quot;);</span>
-<span class="fc" id="L42">        Objects.requireNonNull(screeningDto.getDate(), &quot;Screening start date cannot be null&quot;);</span>
+<span class="fc" id="L42">        Objects.requireNonNull(screeningDto, &quot;Screening cannot be null&quot;);</span>
+<span class="fc" id="L43">        Objects.requireNonNull(screeningDto.getDate(), &quot;Screening start date cannot be null&quot;);</span>
 
-<span class="fc" id="L44">        List&lt;ScreeningDto&gt; sameRoomScreenings = getScreeningsByRoomName(screeningDto.getRoom().getName());</span>
-<span class="fc" id="L45">        LocalDateTime newScreeningStart = screeningDto.getDate();</span>
-<span class="fc" id="L46">        int newScreeningLength = screeningDto.getMovie().getLength();</span>
+<span class="fc" id="L45">        List&lt;ScreeningDto&gt; sameRoomScreenings = getScreeningsByRoomName(screeningDto.getRoom().getName());</span>
+<span class="fc" id="L46">        LocalDateTime newScreeningStart = screeningDto.getDate();</span>
+<span class="fc" id="L47">        int newScreeningLength = screeningDto.getMovie().getLength();</span>
 
-<span class="fc bfc" id="L48" title="All 2 branches covered.">        for (var storedScreening : sameRoomScreenings) {</span>
-<span class="fc" id="L49">            LocalDateTime storedScreeningStart = storedScreening.getDate();</span>
-<span class="fc" id="L50">            int storedScreeningLength = storedScreening.getMovie().getLength();</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        for (var storedScreening : sameRoomScreenings) {</span>
+<span class="fc" id="L50">            LocalDateTime storedScreeningStart = storedScreening.getDate();</span>
+<span class="fc" id="L51">            int storedScreeningLength = storedScreening.getMovie().getLength();</span>
 
-<span class="pc bpc" id="L52" title="1 of 2 branches missed.">            if (newScreeningStart.isAfter(storedScreeningStart.minusMinutes(newScreeningLength + 10))</span>
-<span class="fc bfc" id="L53" title="All 2 branches covered.">                    &amp;&amp; (newScreeningStart.isBefore(storedScreeningStart.plusMinutes(storedScreeningLength))</span>
-<span class="pc bpc" id="L54" title="1 of 2 branches missed.">                    || newScreeningStart.isEqual(storedScreeningStart.plusMinutes(storedScreeningLength)))) {</span>
-<span class="fc" id="L55">                throw new OccupiedRoomException(OVERLAPPING_TIME);</span>
-<span class="pc bpc" id="L56" title="1 of 2 branches missed.">            } else if (newScreeningStart.isAfter(storedScreeningStart.plusMinutes(storedScreeningLength))</span>
-<span class="fc bfc" id="L57" title="All 2 branches covered.">                    &amp;&amp; newScreeningStart.isBefore(storedScreeningStart.plusMinutes(storedScreeningLength + 10))</span>
-<span class="pc bpc" id="L58" title="1 of 2 branches missed.">                    || newScreeningStart.isEqual(storedScreeningStart.plusMinutes(storedScreeningLength + 10))) {</span>
-<span class="fc" id="L59">                throw new ScreeningBreakException(BREAK_TIME_CONFLICT);</span>
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">            if (newScreeningStart.isAfter(storedScreeningStart.minusMinutes(newScreeningLength + 10))</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                    &amp;&amp; (newScreeningStart.isBefore(storedScreeningStart.plusMinutes(storedScreeningLength))</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">                    || newScreeningStart.isEqual(storedScreeningStart.plusMinutes(storedScreeningLength)))) {</span>
+<span class="fc" id="L56">                throw new OccupiedRoomException(OVERLAPPING_TIME);</span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">            } else if (newScreeningStart.isAfter(storedScreeningStart.plusMinutes(storedScreeningLength))</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">                    &amp;&amp; newScreeningStart.isBefore(storedScreeningStart.plusMinutes(storedScreeningLength + 10))</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">                    || newScreeningStart.isEqual(storedScreeningStart.plusMinutes(storedScreeningLength + 10))) {</span>
+<span class="fc" id="L60">                throw new ScreeningBreakException(BREAK_TIME_CONFLICT);</span>
             }
-<span class="nc" id="L61">        }</span>
+<span class="nc" id="L62">        }</span>
 
-<span class="fc" id="L63">        Screening screening = new Screening(screeningDto.getMovie().getName(),</span>
-<span class="fc" id="L64">                screeningDto.getRoom().getName(),</span>
-<span class="fc" id="L65">                screeningDto.getDate());</span>
-<span class="fc" id="L66">        screeningRepository.save(screening);</span>
-<span class="fc" id="L67">    }</span>
+<span class="fc" id="L64">        Screening screening = new Screening(screeningDto.getMovie().getName(),</span>
+<span class="fc" id="L65">                screeningDto.getRoom().getName(),</span>
+<span class="fc" id="L66">                screeningDto.getDate());</span>
+<span class="fc" id="L67">        screeningRepository.save(screening);</span>
+<span class="fc" id="L68">    }</span>
 
     @Override
     public void deleteScreening(String movie, String room, LocalDateTime date) {
-<span class="fc" id="L71">        Objects.requireNonNull(movie, &quot;Movie title cannot be null&quot;);</span>
-<span class="fc" id="L72">        Objects.requireNonNull(room, &quot;Room name cannot be null&quot;);</span>
-<span class="fc" id="L73">        Objects.requireNonNull(date, &quot;Screening start date cannot be null&quot;);</span>
-<span class="fc" id="L74">        screeningRepository.deleteByMovieAndRoomAndDate(movie, room, date);</span>
-<span class="fc" id="L75">    }</span>
+<span class="fc" id="L72">        Objects.requireNonNull(movie, &quot;Movie title cannot be null&quot;);</span>
+<span class="fc" id="L73">        Objects.requireNonNull(room, &quot;Room name cannot be null&quot;);</span>
+<span class="fc" id="L74">        Objects.requireNonNull(date, &quot;Screening start date cannot be null&quot;);</span>
+<span class="fc" id="L75">        screeningRepository.deleteByMovieAndRoomAndDate(movie, room, date);</span>
+<span class="fc" id="L76">    }</span>
 
     private List&lt;ScreeningDto&gt; getScreeningsByRoomName(String room) {
-<span class="fc" id="L78">        return screeningRepository.findByRoom(room)</span>
-<span class="fc" id="L79">                .stream()</span>
-<span class="fc" id="L80">                .map(this::convertEntityToDto)</span>
-<span class="fc" id="L81">                .collect(Collectors.toList());</span>
+<span class="fc" id="L79">        return screeningRepository.findByRoom(room)</span>
+<span class="fc" id="L80">                .stream()</span>
+<span class="fc" id="L81">                .map(this::convertEntityToDto)</span>
+<span class="fc" id="L82">                .collect(Collectors.toList());</span>
     }
 
     @Override
     public List&lt;ScreeningDto&gt; getScreeningList() {
-<span class="fc" id="L86">        return screeningRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());</span>
+<span class="fc" id="L87">        return screeningRepository.findAll().stream().map(this::convertEntityToDto).collect(Collectors.toList());</span>
     }
 
     private ScreeningDto convertEntityToDto(Screening screening) {
-<span class="fc" id="L90">        Optional&lt;MovieDto&gt; movieDto = movieService.getMovieByName(screening.getMovie());</span>
-<span class="fc" id="L91">        Optional&lt;RoomDto&gt; roomDto = roomService.getRoomByName(screening.getRoom());</span>
+<span class="fc" id="L91">        Optional&lt;MovieDto&gt; movieDto = movieService.getMovieByName(screening.getMovie());</span>
+<span class="fc" id="L92">        Optional&lt;RoomDto&gt; roomDto = roomService.getRoomByName(screening.getRoom());</span>
 
-<span class="fc bfc" id="L93" title="All 4 branches covered.">        if (movieDto.isEmpty() || roomDto.isEmpty()) {</span>
-<span class="fc" id="L94">            throw new NullPointerException(&quot;The Movie or Room is non-existent or the date is incorrect.&quot;);</span>
+<span class="fc bfc" id="L94" title="All 4 branches covered.">        if (movieDto.isEmpty() || roomDto.isEmpty()) {</span>
+<span class="fc" id="L95">            throw new NullPointerException(&quot;The Movie or Room is non-existent or the date is incorrect.&quot;);</span>
         }
-<span class="fc" id="L96">        return ScreeningDto.builder()</span>
-<span class="fc" id="L97">            .withMovie(movieDto.get())</span>
-<span class="fc" id="L98">            .withRoom(roomDto.get())</span>
-<span class="fc" id="L99">            .withDate(screening.getDate())</span>
-<span class="fc" id="L100">            .build();</span>
+<span class="fc" id="L97">        return ScreeningDto.builder()</span>
+<span class="fc" id="L98">            .withMovie(movieDto.get())</span>
+<span class="fc" id="L99">            .withRoom(roomDto.get())</span>
+<span class="fc" id="L100">            .withDate(screening.getDate())</span>
+<span class="fc" id="L101">            .build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
